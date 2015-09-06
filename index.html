@@ -3,17 +3,18 @@
 <head>
 	<title>Cycle Collider</title>
   <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+  <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
 </head>
 
 <body>
 <p>introduction</p>
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+
 <script>
 
   <div id="map"></div>
   #map { height: 500px; }
   
-  var map = L.map('map').setView([54.597, -5.930], 13);
+  var map = L.map('map').setView([54.597, -5.93], 13);
 
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 			maxZoom: 18,
@@ -25,6 +26,6 @@
 		}).addTo(map);
 
 </script>  
-,p>Map created 06-09-2015</p>
+<p>Map created 06-09-2015</p>
 </body>
 </html>
