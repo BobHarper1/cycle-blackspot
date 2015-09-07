@@ -9,6 +9,7 @@
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
   	<script src="leaflet-routing-machine.js"></script>
   	<script src="Control.Geocoder.js"></script>
+  	<script src="leaflet-geoip.js"></script>
 </head>
 
 <body>
@@ -17,7 +18,9 @@
 
 <script>
 
-  var map = L.map('map').setView([54.597, -5.93], 13);
+  var pos = L.GeoIP.getPosition();
+  
+  var map = L.map('map').setView([pos], 13);
 
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
 			maxZoom: 18,
@@ -30,7 +33,7 @@
 	
 L.Routing.control({
   waypoints: [
-    L.latLng(54.597, -5.93),
+    L.latLng(pos),
     L.latLng(55.241, -6.51)
   ]
 }).addTo(map);
@@ -42,6 +45,6 @@ L.Control.geocoder({
 
 </script>  
 
-<p>Map created 06-09-2015</p>
+<p>Created 06-09-2015</p>
 </body>
 </html>
