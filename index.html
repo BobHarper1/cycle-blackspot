@@ -17,7 +17,6 @@
   	<div id="map" style="height: 800px; width: 1000px"></div>
 
 <script>
-
   var pos = L.GeoIP.getPosition();
   
   var map = L.map('map');
@@ -33,13 +32,18 @@
 			accessToken: 'pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg'
 		}).addTo(map);
 	
-L.Routing.control().addTo(map);
-
-L.Control.geocoder({
+  L.Control.geocoder({
     collapsed: false, 
     position: 'topright'
-}).addTo(map);
+  }).addTo(map);
 
+  L.Routing.control({
+  waypoints: [
+    L.latLng(54.6, -5.9),
+    L.latLng(55.2, -6.5)
+  ]
+}).addTo(map);
+  
 </script>  
 
 <p>Created 06-09-2015</p>
