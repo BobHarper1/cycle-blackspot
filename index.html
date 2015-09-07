@@ -33,12 +33,7 @@
 			accessToken: 'pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg'
 		}).addTo(map);
 	
-L.Routing.control({
-  waypoints: [
-    L.latLng(pos),
-    L.latLng(55.241, -6.51)
-  ]
-}).addTo(map);
+L.Routing.control().addTo(map);
 
 L.Control.geocoder({
     collapsed: false, 
