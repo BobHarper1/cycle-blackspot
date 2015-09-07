@@ -27,17 +27,14 @@
 			id: 'mapbox.run-bike-hike',
 			accessToken: 'pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg'
 		}).addTo(map);
-	
-  L.Control.geocoder({
-    collapsed: false, 
-    position: 'topright'
-  }).addTo(map);
 
   L.Routing.control({
   waypoints: [
     L.latLng(54.6, -5.9),
     L.latLng(55.2, -6.5)
-  ]
+  ],
+  routeWhileDragging: true,
+  geocoder: L.Control.Geocoder.nominatim()
 }).addTo(map);
   
 </script>  
