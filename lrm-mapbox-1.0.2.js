@@ -199,7 +199,7 @@ if (typeof module !== undefined) module.exports = polyline;
 		options: {
 			serviceUrl: 'https://api.tiles.mapbox.com/v4/directions/',
 			timeout: 30 * 1000,
-			profile: 'mapbox.driving'
+			profile: 'mapbox.cycling'
 		},
 
 		initialize: function(accessToken, options) {
