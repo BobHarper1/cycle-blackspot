@@ -29,7 +29,7 @@
 		accessToken: 'pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg'
 	}).addTo(map);
 	
-  L.Control.Geocoder.addTo(map);
+  
 
   L.Routing.control({
   	waypoints: [
@@ -37,6 +37,7 @@
     		L.latLng(55.2, -6.5)
   		],
   	routeWhileDragging: true,
+  	L.Control.Geocoder.nominatum();
   }).addTo(map);
 
 </script>  
