@@ -9,6 +9,7 @@
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
   	<script src="leaflet-routing-machine.js"></script>
   	<script src="leaflet-control-geocoder.js"></script>
+  	<script src="lrm-mapbox-1.0.2.js"></script>
 </head>
 
 <body>
@@ -17,7 +18,7 @@
 
 <script>
 // Load Leaflet map, view set for Belfast City Centre
-  var map = L.map('map').setView([54.6, -5.9], 13);
+  var map = L.map('map').setView([54.597, -5.93], 13);
 
 // Load MapBox 'Run, Bike and Hike' tile layer
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -31,14 +32,15 @@
 	}).addTo(map);
 	
   
-// Route: Belfast City Hall (54.6, -5.9) to Giant's Causeway (55.2, -6.5)
+// Route: from Belfast City Hall (54.597, -5.93) to Giant's Causeway (55.24, -6.51)
   L.Routing.control({
     waypoints: [
-        L.latLng(54.6, -5.9),
-        L.latLng(55.2, -6.5)
+        L.latLng(54.597, -5.93),
+        L.latLng(55.24, -6.51)
     ],
     routeWhileDragging: true,
-    geocoder: L.Control.Geocoder.nominatim()
+    geocoder: L.Control.Geocoder.nominatim(),
+    router: L.Routing.mapbox('pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg');
   }).addTo(map);
 
 </script>  
