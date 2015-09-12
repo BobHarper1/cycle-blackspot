@@ -1,0 +1,2466 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SAT",
+                "day": "11",
+                "month": "January",
+                "hour": "10",
+                "minute": "30",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.921836,
+                    54.66173
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SUN",
+                "day": "26",
+                "month": "January",
+                "hour": "11",
+                "minute": "23",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.782049,
+                    54.811469
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "THU",
+                "day": "30",
+                "month": "January",
+                "hour": "11",
+                "minute": "40",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.435735,
+                    54.426244
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "TUE",
+                "day": "4",
+                "month": "February",
+                "hour": "13",
+                "minute": "30",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.984958,
+                    54.434577
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "THU",
+                "day": "6",
+                "month": "February",
+                "hour": "17",
+                "minute": "18",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.103743,
+                    54.502648
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "1",
+                "num_casualties": "2",
+                "weekday": "SAT",
+                "day": "22",
+                "month": "February",
+                "hour": "12",
+                "minute": "8",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.472365,
+                    54.829127
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "MON",
+                "day": "17",
+                "month": "March",
+                "hour": "11",
+                "minute": "45",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.632583,
+                    54.284462
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SUN",
+                "day": "30",
+                "month": "March",
+                "hour": "15",
+                "minute": "40",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.357489,
+                    54.454755
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "WED",
+                "day": "9",
+                "month": "April",
+                "hour": "19",
+                "minute": "9",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.949185,
+                    54.593874
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "WED",
+                "day": "9",
+                "month": "April",
+                "hour": "20",
+                "minute": "0",
+                "road_type": "Dual carriageway",
+                "speed_limit": "70"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.665281,
+                    55.123436
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SUN",
+                "day": "20",
+                "month": "April",
+                "hour": "16",
+                "minute": "0",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.665608,
+                    55.151234
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "TUE",
+                "day": "20",
+                "month": "May",
+                "hour": "16",
+                "minute": "10",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.758537,
+                    54.503752
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "1",
+                "num_casualties": "2",
+                "weekday": "TUE",
+                "day": "20",
+                "month": "May",
+                "hour": "17",
+                "minute": "20",
+                "road_type": "One way street",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.931901,
+                    54.597237
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "WED",
+                "day": "28",
+                "month": "May",
+                "hour": "20",
+                "minute": "0",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.783381,
+                    54.511363
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "3",
+                "num_casualties": "2",
+                "weekday": "SAT",
+                "day": "31",
+                "month": "May",
+                "hour": "19",
+                "minute": "27",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.899754,
+                    54.240397
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "THU",
+                "day": "5",
+                "month": "June",
+                "hour": "17",
+                "minute": "26",
+                "road_type": "One way street",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.921587,
+                    54.597689
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SUN",
+                "day": "8",
+                "month": "June",
+                "hour": "13",
+                "minute": "56",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.913433,
+                    54.466267
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Fatal Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "WED",
+                "day": "11",
+                "month": "June",
+                "hour": "9",
+                "minute": "1",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.95401,
+                    54.613049
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "2",
+                "weekday": "THU",
+                "day": "19",
+                "month": "June",
+                "hour": "8",
+                "minute": "45",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.871781,
+                    54.595476
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "THU",
+                "day": "19",
+                "month": "June",
+                "hour": "9",
+                "minute": "50",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.91484,
+                    54.629776
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "FRI",
+                "day": "20",
+                "month": "June",
+                "hour": "17",
+                "minute": "30",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.098211,
+                    54.063941
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "MON",
+                "day": "23",
+                "month": "June",
+                "hour": "8",
+                "minute": "15",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.215968,
+                    54.940378
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "MON",
+                "day": "30",
+                "month": "June",
+                "hour": "13",
+                "minute": "45",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.041623,
+                    54.737805
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SAT",
+                "day": "5",
+                "month": "July",
+                "hour": "18",
+                "minute": "50",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.992054,
+                    54.572329
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SUN",
+                "day": "6",
+                "month": "July",
+                "hour": "18",
+                "minute": "20",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.936135,
+                    54.609287
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "THU",
+                "day": "10",
+                "month": "July",
+                "hour": "18",
+                "minute": "30",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.240539,
+                    55.205849
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "2",
+                "weekday": "SUN",
+                "day": "13",
+                "month": "July",
+                "hour": "11",
+                "minute": "27",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.233762,
+                    54.74028
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "THU",
+                "day": "17",
+                "month": "July",
+                "hour": "10",
+                "minute": "12",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.333985,
+                    54.186463
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SUN",
+                "day": "20",
+                "month": "July",
+                "hour": "12",
+                "minute": "10",
+                "road_type": "Roundabout",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.687692,
+                    54.593374
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "TUE",
+                "day": "22",
+                "month": "July",
+                "hour": "19",
+                "minute": "8",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.023252,
+                    54.580525
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SUN",
+                "day": "27",
+                "month": "July",
+                "hour": "12",
+                "minute": "35",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.534786,
+                    54.64056
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SAT",
+                "day": "26",
+                "month": "July",
+                "hour": "12",
+                "minute": "30",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.045309,
+                    54.552733
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "THU",
+                "day": "31",
+                "month": "July",
+                "hour": "20",
+                "minute": "14",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.910252,
+                    54.591196
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SUN",
+                "day": "3",
+                "month": "August",
+                "hour": "11",
+                "minute": "45",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.384435,
+                    54.394239
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "THU",
+                "day": "7",
+                "month": "August",
+                "hour": "11",
+                "minute": "50",
+                "road_type": "Roundabout",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.815619,
+                    54.850399
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "TUE",
+                "day": "5",
+                "month": "August",
+                "hour": "13",
+                "minute": "30",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.964447,
+                    54.596244
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "TUE",
+                "day": "19",
+                "month": "August",
+                "hour": "14",
+                "minute": "30",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.712934,
+                    54.505472
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "FRI",
+                "day": "22",
+                "month": "August",
+                "hour": "22",
+                "minute": "57",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.966869,
+                    54.568745
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "3",
+                "num_casualties": "1",
+                "weekday": "FRI",
+                "day": "1",
+                "month": "August",
+                "hour": "17",
+                "minute": "0",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.934213,
+                    54.609335
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "1",
+                "num_casualties": "2",
+                "weekday": "THU",
+                "day": "28",
+                "month": "August",
+                "hour": "16",
+                "minute": "18",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.954099,
+                    54.688066
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SAT",
+                "day": "30",
+                "month": "August",
+                "hour": "10",
+                "minute": "10",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.958025,
+                    54.573673
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SUN",
+                "day": "31",
+                "month": "August",
+                "hour": "19",
+                "minute": "30",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.446202,
+                    54.420431
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "3",
+                "num_casualties": "2",
+                "weekday": "SAT",
+                "day": "6",
+                "month": "September",
+                "hour": "13",
+                "minute": "0",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.167287,
+                    54.129717
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "WED",
+                "day": "10",
+                "month": "September",
+                "hour": "7",
+                "minute": "30",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.122572,
+                    54.624438
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "WED",
+                "day": "10",
+                "month": "September",
+                "hour": "11",
+                "minute": "24",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.890705,
+                    54.597883
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "FRI",
+                "day": "19",
+                "month": "September",
+                "hour": "15",
+                "minute": "5",
+                "road_type": "Roundabout",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.347199,
+                    54.151298
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SAT",
+                "day": "20",
+                "month": "September",
+                "hour": "15",
+                "minute": "15",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.555858,
+                    54.53977
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "MON",
+                "day": "22",
+                "month": "September",
+                "hour": "13",
+                "minute": "46",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.341197,
+                    54.453436
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Fatal Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "THU",
+                "day": "25",
+                "month": "September",
+                "hour": "20",
+                "minute": "30",
+                "road_type": "Dual carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.3402,
+                    54.214483
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "MON",
+                "day": "29",
+                "month": "September",
+                "hour": "9",
+                "minute": "5",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.91939,
+                    54.595558
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "FRI",
+                "day": "3",
+                "month": "October",
+                "hour": "16",
+                "minute": "10",
+                "road_type": "Slip road",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.920125,
+                    54.629094
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SAT",
+                "day": "4",
+                "month": "October",
+                "hour": "10",
+                "minute": "30",
+                "road_type": "Roundabout",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.663819,
+                    55.156406
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "3",
+                "num_casualties": "1",
+                "weekday": "THU",
+                "day": "23",
+                "month": "October",
+                "hour": "10",
+                "minute": "10",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.307317,
+                    54.831845
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "TUE",
+                "day": "21",
+                "month": "October",
+                "hour": "9",
+                "minute": "0",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.952338,
+                    54.563415
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "1",
+                "num_casualties": "1",
+                "weekday": "SAT",
+                "day": "18",
+                "month": "October",
+                "hour": "17",
+                "minute": "30",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.990974,
+                    54.557494
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "FRI",
+                "day": "7",
+                "month": "November",
+                "hour": "11",
+                "minute": "1",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.669205,
+                    54.900073
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "4",
+                "num_casualties": "3",
+                "weekday": "SUN",
+                "day": "9",
+                "month": "November",
+                "hour": "11",
+                "minute": "45",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.4965,
+                    54.336767
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Fatal Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "WED",
+                "day": "12",
+                "month": "November",
+                "hour": "6",
+                "minute": "55",
+                "road_type": "Dual carriageway",
+                "speed_limit": "70"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.106609,
+                    54.449008
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "TUE",
+                "day": "18",
+                "month": "November",
+                "hour": "18",
+                "minute": "58",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.006434,
+                    54.570158
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "TUE",
+                "day": "25",
+                "month": "November",
+                "hour": "11",
+                "minute": "55",
+                "road_type": "Roundabout",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.601767,
+                    54.832648
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "FRI",
+                "day": "28",
+                "month": "November",
+                "hour": "7",
+                "minute": "50",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.264096,
+                    54.857262
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2014",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SAT",
+                "day": "20",
+                "month": "December",
+                "hour": "9",
+                "minute": "47",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.946657,
+                    54.444741
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "MON",
+                "day": "4",
+                "month": "February",
+                "hour": "9",
+                "minute": "30",
+                "road_type": "Roundabout",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.27181,
+                    54.346174
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "TUE",
+                "day": "12",
+                "month": "February",
+                "hour": "7",
+                "minute": "54",
+                "road_type": "Single carriageway",
+                "speed_limit": "40"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.327561,
+                    54.861279
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "FRI",
+                "day": "15",
+                "month": "February",
+                "hour": "14",
+                "minute": "50",
+                "road_type": "Roundabout",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.632733,
+                    54.668204
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "2",
+                "weekday": "MON",
+                "day": "18",
+                "month": "February",
+                "hour": "8",
+                "minute": "41",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.936869,
+                    54.583135
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "1",
+                "num_casualties": "1",
+                "weekday": "WED",
+                "day": "27",
+                "month": "February",
+                "hour": "8",
+                "minute": "30",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.228108,
+                    54.500617
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "3",
+                "num_casualties": "2",
+                "weekday": "SAT",
+                "day": "2",
+                "month": "March",
+                "hour": "11",
+                "minute": "17",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.592923,
+                    54.720419
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Fatal Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "WED",
+                "day": "6",
+                "month": "March",
+                "hour": "11",
+                "minute": "36",
+                "road_type": "Single carriageway",
+                "speed_limit": "40"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.327614,
+                    54.161361
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "MON",
+                "day": "11",
+                "month": "March",
+                "hour": "11",
+                "minute": "30",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.960196,
+                    54.59955
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SAT",
+                "day": "20",
+                "month": "April",
+                "hour": "9",
+                "minute": "45",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.925573,
+                    54.591118
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Fatal Collision",
+                "num_vehicles": "1",
+                "num_casualties": "1",
+                "weekday": "SAT",
+                "day": "4",
+                "month": "May",
+                "hour": "10",
+                "minute": "0",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.896082,
+                    54.678123
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SAT",
+                "day": "4",
+                "month": "May",
+                "hour": "12",
+                "minute": "30",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.387644,
+                    54.469006
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "2",
+                "weekday": "TUE",
+                "day": "7",
+                "month": "May",
+                "hour": "20",
+                "minute": "37",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.787881,
+                    54.722344
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "MON",
+                "day": "17",
+                "month": "June",
+                "hour": "15",
+                "minute": "0",
+                "road_type": "Single carriageway",
+                "speed_limit": "50"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.478408,
+                    54.401974
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "2",
+                "weekday": "MON",
+                "day": "17",
+                "month": "June",
+                "hour": "17",
+                "minute": "43",
+                "road_type": "Single carriageway",
+                "speed_limit": "40"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.61672,
+                    54.536001
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "TUE",
+                "day": "18",
+                "month": "June",
+                "hour": "9",
+                "minute": "55",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.463079,
+                    54.826526
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SAT",
+                "day": "15",
+                "month": "June",
+                "hour": "12",
+                "minute": "0",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.944774,
+                    54.584976
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Fatal Collision",
+                "num_vehicles": "2",
+                "num_casualties": "2",
+                "weekday": "THU",
+                "day": "27",
+                "month": "June",
+                "hour": "20",
+                "minute": "40",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.278621,
+                    54.862491
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "MON",
+                "day": "1",
+                "month": "July",
+                "hour": "7",
+                "minute": "37",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.921222,
+                    54.595446
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SUN",
+                "day": "30",
+                "month": "June",
+                "hour": "20",
+                "minute": "0",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.839703,
+                    54.592257
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SAT",
+                "day": "6",
+                "month": "July",
+                "hour": "13",
+                "minute": "40",
+                "road_type": "Dual carriageway",
+                "speed_limit": "70"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.476961,
+                    54.758852
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "TUE",
+                "day": "9",
+                "month": "July",
+                "hour": "19",
+                "minute": "40",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.193822,
+                    54.337412
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Fatal Collision",
+                "num_vehicles": "2",
+                "num_casualties": "4",
+                "weekday": "TUE",
+                "day": "16",
+                "month": "July",
+                "hour": "1",
+                "minute": "15",
+                "road_type": "Single carriageway",
+                "speed_limit": "40"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.624292,
+                    54.335832
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "MON",
+                "day": "15",
+                "month": "July",
+                "hour": "18",
+                "minute": "0",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.910455,
+                    54.591756
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "1",
+                "num_casualties": "1",
+                "weekday": "SAT",
+                "day": "13",
+                "month": "July",
+                "hour": "11",
+                "minute": "20",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.507606,
+                    54.869923
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "4",
+                "num_casualties": "1",
+                "weekday": "THU",
+                "day": "18",
+                "month": "July",
+                "hour": "16",
+                "minute": "30",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.085836,
+                    55.025931
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "FRI",
+                "day": "19",
+                "month": "July",
+                "hour": "13",
+                "minute": "9",
+                "road_type": "Single carriageway",
+                "speed_limit": "40"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.348572,
+                    55.028546
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SAT",
+                "day": "27",
+                "month": "July",
+                "hour": "8",
+                "minute": "55",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.991051,
+                    54.57321
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "THU",
+                "day": "1",
+                "month": "August",
+                "hour": "18",
+                "minute": "7",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.93339,
+                    54.576696
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "3",
+                "num_casualties": "1",
+                "weekday": "SAT",
+                "day": "10",
+                "month": "August",
+                "hour": "9",
+                "minute": "0",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.538039,
+                    54.330827
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "MON",
+                "day": "12",
+                "month": "August",
+                "hour": "8",
+                "minute": "54",
+                "road_type": "Roundabout",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.65079,
+                    54.650001
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "WED",
+                "day": "14",
+                "month": "August",
+                "hour": "19",
+                "minute": "0",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.613625,
+                    54.750466
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SUN",
+                "day": "25",
+                "month": "August",
+                "hour": "16",
+                "minute": "22",
+                "road_type": "Single carriageway",
+                "speed_limit": "60"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.611462,
+                    55.203477
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "THU",
+                "day": "29",
+                "month": "August",
+                "hour": "9",
+                "minute": "30",
+                "road_type": "Roundabout",
+                "speed_limit": "40"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.324601,
+                    54.611236
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SUN",
+                "day": "1",
+                "month": "September",
+                "hour": "11",
+                "minute": "7",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.946799,
+                    54.081938
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "MON",
+                "day": "2",
+                "month": "September",
+                "hour": "16",
+                "minute": "45",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.831679,
+                    54.459553
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "TUE",
+                "day": "17",
+                "month": "September",
+                "hour": "8",
+                "minute": "30",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.71436,
+                    54.312414
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "WED",
+                "day": "9",
+                "month": "October",
+                "hour": "11",
+                "minute": "40",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.334382,
+                    54.178867
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "THU",
+                "day": "17",
+                "month": "October",
+                "hour": "17",
+                "minute": "40",
+                "road_type": "Single carriageway",
+                "speed_limit": "50"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.067381,
+                    54.516816
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "THU",
+                "day": "17",
+                "month": "October",
+                "hour": "21",
+                "minute": "54",
+                "road_type": "Roundabout",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.96434,
+                    54.68486
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "TUE",
+                "day": "22",
+                "month": "October",
+                "hour": "18",
+                "minute": "55",
+                "road_type": "Single carriageway",
+                "speed_limit": "40"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -7.327621,
+                    55.009703
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "WED",
+                "day": "30",
+                "month": "October",
+                "hour": "6",
+                "minute": "50",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.694423,
+                    54.599128
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "SAT",
+                "day": "2",
+                "month": "November",
+                "hour": "8",
+                "minute": "0",
+                "road_type": "Roundabout",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.676214,
+                    54.64545
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "THU",
+                "day": "14",
+                "month": "November",
+                "hour": "17",
+                "minute": "0",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.92213,
+                    54.582478
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "WED",
+                "day": "4",
+                "month": "December",
+                "hour": "17",
+                "minute": "54",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -6.638096,
+                    54.347693
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "year": "2013",
+                "severity": "Serious Collision",
+                "num_vehicles": "2",
+                "num_casualties": "1",
+                "weekday": "TUE",
+                "day": "10",
+                "month": "December",
+                "hour": "17",
+                "minute": "4",
+                "road_type": "Single carriageway",
+                "speed_limit": "30"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -5.675529,
+                    54.654468
+                ]
+            }
+        }
+    ]
+}
