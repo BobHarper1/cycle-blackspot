@@ -13,7 +13,7 @@
 
 <body>
 <p>introduction</p>
-  	<div id="map" style="height: 800px; width: 1000px"></div>
+  	<div id="map" style="height: 800px"></div>
 
 <script>
 
@@ -37,7 +37,7 @@
     		L.latLng(55.2, -6.5)
   		],
   	routeWhileDragging: true,
-  	L.Control.Geocoder.nominatum();
+  	geocoder: L.Control.Geocoder.nominatum()
   }).addTo(map);
 
 </script>  
