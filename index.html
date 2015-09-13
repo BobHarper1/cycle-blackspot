@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="leaflet-routing-machine.css" />
 	<link rel="stylesheet" href="leaflet-control-geocoder.css" />
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+	<script src="leaflet.ajax.min.js"></script>
   	<script src="leaflet-routing-machine.js"></script>
   	<script src="lrm-mapbox-1.0.2.js"></script>
   	<script src="leaflet-control-geocoder.js"></script>
@@ -32,11 +33,10 @@
 	}).addTo(map);
 
 // Add collisions data as .GeoJSON layer with popup for each event
-  var myLayer = L.geoJson().addTo(map);
+  var geojsonLayer = new L.GeoJSON.AJAX("cycle-collisions.geojson");       
   
-  var collisions = ('cycle-collisions.geojson');
-  
-  myLayer.addData(collisions);
+  geojsonLayer.addTo(map);
+
   
 // Default route: from Belfast City Hall (54.597, -5.93) to Giant's Causeway (55.24, -6.51), add geocoder and Mapbox cycle router
   L.Routing.control({
