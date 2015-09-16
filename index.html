@@ -39,12 +39,12 @@
   }
   
   var geojsonMarkerOptions = {
-    radius: 12,
-    fillColor: "#ff0000",
+    radius: 8,
+    fillColor: "#ffffff",
     color: "#000",
     weight: 1,
     opacity: 1,
-    fillOpacity: 0.6
+    fillOpacity: 0.5
   };
   
   var geojsonLayer = new L.GeoJSON.AJAX("cycle-collisions.geojson", {
@@ -67,6 +67,10 @@
     router: new L.Routing.Mapbox('pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg')
   }).addTo(map);
 
+  L.Routing.line({
+  	style: [{color: 'blue', opacity 0.8, weight:8}]
+  })
+  
 </script>  
 </body>
 </html>
