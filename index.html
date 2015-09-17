@@ -64,7 +64,8 @@
     ],
     routeWhileDragging: true,
     geocoder: L.Control.Geocoder.nominatim(),
-    router: new L.Routing.Mapbox('pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg')
+    router: new L.Routing.Mapbox('pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg'),
+    lineOptions: styles [{color: 'blue', opacity: 0.15, weight: 9}]
   }).addTo(map);
 
 </script>  
