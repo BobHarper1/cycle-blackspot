@@ -2,6 +2,8 @@
 <html>
 <head>
 	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
 	<title>Cycle Collider</title>
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
 	<link rel="stylesheet" href="leaflet-routing-machine.css" />
@@ -11,6 +13,17 @@
   	<script src="leaflet-routing-machine.js"></script>
   	<script src="lrm-mapbox-1.0.2.js"></script>
   	<script src="leaflet-control-geocoder.js"></script>
+  	
+<style>
+	body {
+		padding: 0;
+		margin: 0;
+	}
+	html, body, #map {
+		height: 100%;
+	}
+</style>
+
 </head>
 
 <body>
@@ -19,7 +32,7 @@
 
 <script>
 // Load Leaflet map, view set for Belfast City Centre
-  var map = L.map('map').setView([54.597, -5.93], 13);
+  var map = L.map('map');
 
 // Load OpenCycleMap
   L.tileLayer('http://b.tile.thunderforest.com/cycle/{z}/{x}/{y}.png', {
@@ -41,7 +54,6 @@
   var geojsonMarkerOptions = {
     radius: 8,
     fillColor: "#ffffff",
-    stroke: false,
     fillOpacity: 0.5
   };
   
@@ -53,6 +65,9 @@
     });
   
   geojsonLayer.addTo(map);
+
+// SetView to thon location
+map.locate({setView: true, maxZoom: 16});
 
 // Default route: from Belfast City Hall (54.597, -5.93) to Giant's Causeway (55.24, -6.51), add geocoder and Mapbox cycle router
   L.Routing.control({
