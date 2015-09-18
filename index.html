@@ -86,7 +86,7 @@ map.on('locationerror', onLocationError);
 // Default route: from Belfast City Hall (54.597, -5.93) to Giant's Causeway (55.24, -6.51), add geocoder and Mapbox cycle router
   L.Routing.control({
     waypoints: [
-        L.latLng(e.latlng),
+        L.latLng(latlng),
         L.latLng(55.24, -6.51)
     ],
     routeWhileDragging: true,
