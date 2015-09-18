@@ -40,19 +40,19 @@
   
   var geojsonMarkerOptions = {
     radius: 8,
-    fillColor: "#000",
+    fillColor: "#ffffff",
     stroke: false,
     fillOpacity: 0.5
   };
   
   var geojsonLayer = new L.GeoJSON.AJAX("cycle-collisions.geojson", {
   	pointToLayer: function (feature, latlng) {
-        	return L.circle(latlng, geojsonMarkerOptions);
+        	return L.circleMarker(latlng, geojsonMarkerOptions);
   	},
   	onEachFeature : onEachFeature
     });
   
-  geojson.addTo(map);
+  geojsonLayer.addTo(map);
 
 // Default route: from Belfast City Hall (54.597, -5.93) to Giant's Causeway (55.24, -6.51), add geocoder and Mapbox cycle router
   L.Routing.control({
