@@ -6,13 +6,13 @@
 
 	<title>Cycle Collider</title>
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
-	<link rel="stylesheet" href="leaflet-routing-machine.css" />
-	<link rel="stylesheet" href="leaflet-control-geocoder.css" />
+	<link rel="stylesheet" href="css/leaflet-routing-machine.css" />
+	<link rel="stylesheet" href="css/leaflet-control-geocoder.css" />
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
-	<script src="leaflet.ajax.min.js"></script>
-  	<script src="leaflet-routing-machine.js"></script>
-  	<script src="lrm-mapbox-1.0.2.js"></script>
-  	<script src="leaflet-control-geocoder.js"></script>
+	<script src="src/leaflet.ajax.min.js"></script>
+  	<script src="src/leaflet-routing-machine.js"></script>
+  	<script src="src/lrm-mapbox-1.0.2.js"></script>
+  	<script src="src/leaflet-control-geocoder.js"></script>
   	
 <style>
 	body {
@@ -27,7 +27,7 @@
 </head>
 
 <body>
-<p>introduction</p>
+<h1>Cycle collision blackspots Northern Ireland</h1>
   	<div id="map"></div>
 
 <script>
@@ -44,6 +44,20 @@
 			'Map &copy; <a href="http://www.thunderforest.com/">OpenCycleMap</a>',
 	}).addTo(map);
 
+// SetView to thon location
+map.locate({setView: true});
+
+function onLocationFound(e) {
+        L.marker(e.latlng).addTo(map)
+}
+
+map.on('locationfound', onLocationFound);
+
+function onLocationError(e) {
+    alert(e.message);
+}
+map.on('locationerror', onLocationError);	
+
 // Add collisions data as .GeoJSON layer with popup for each click event (a_type = severity of collision)
   function onEachFeature(feature, layer) {
         if (feature.properties && feature.properties.a_type) {
@@ -57,22 +71,23 @@
     fillOpacity: 0.5
   };
   
-  var geojsonLayer = new L.GeoJSON.AJAX("cycle-collisions.geojson", {
+  var geojsonLayer1 = new L.GeoJSON.AJAX("cycle-collisions.geojson", {
   	pointToLayer: function (feature, latlng) {
         	return L.circleMarker(latlng, geojsonMarkerOptions);
   	},
   	onEachFeature : onEachFeature
     });
-  
-  geojsonLayer.addTo(map);
 
-// SetView to thon location
-map.locate({setView: true, maxZoom: 16});
+  var geojsonLayer2 = new L.GeoJSON.AJAX("collision-clusters.geojson");
+	
+  geojsonLayer1.addTo(map);
+  geojsonLayer2.addTo(map);
+
 
 // Default route: from Belfast City Hall (54.597, -5.93) to Giant's Causeway (55.24, -6.51), add geocoder and Mapbox cycle router
   L.Routing.control({
     waypoints: [
-        L.latLng(54.597, -5.93),
+        L.latLng(e.latlng),
         L.latLng(55.24, -6.51)
     ],
     routeWhileDragging: true,
