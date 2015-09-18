@@ -71,17 +71,16 @@ map.on('locationerror', onLocationError);
     fillOpacity: 0.5
   };
   
-  var geojsonLayer1 = new L.GeoJSON.AJAX("cycle-collisions.geojson", {
+  var geojsonLayer = new L.GeoJSON.AJAX("data/cycle-collisions.geojson", {
   	pointToLayer: function (feature, latlng) {
         	return L.circleMarker(latlng, geojsonMarkerOptions);
   	},
   	onEachFeature : onEachFeature
     });
-
-  var geojsonLayer2 = new L.GeoJSON.AJAX("collision-clusters.geojson");
+	geojsonLayer.addurl("data/collision-clusters.geojson");
 	
-  geojsonLayer1.addTo(map);
-  geojsonLayer2.addTo(map);
+  geojsonLayer.addTo(map);
+
 
 
 // Default route: from Belfast City Hall (54.597, -5.93) to Giant's Causeway (55.24, -6.51), add geocoder and Mapbox cycle router
