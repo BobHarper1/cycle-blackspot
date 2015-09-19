@@ -78,8 +78,11 @@ map.on('locationerror', onLocationError);
   	},
   	onEachFeature : onEachFeature
     });
+	
+  var clusters = new L.GeoJSON.AJAX("data/collision-clusters.geojson");
 
 	geojsonLayer.addTo(map);
+	clusters.addTo(map);
   
   geojsonLayer.addUrl("data/cycle_collisions_KSI_14_only.geojson");
 	
