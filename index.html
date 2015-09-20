@@ -4,7 +4,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-	<title>Cycle Collider</title>
+	<title>Cycle Blackspots</title>
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
 	<link rel="stylesheet" href="css/leaflet-routing-machine.css" />
 	<link rel="stylesheet" href="css/leaflet-control-geocoder.css" />
@@ -30,14 +30,9 @@
 </head>
 
 <body>
-<h1>Cycle Blackspots Northern Ireland</h1>
-<p>'Cycle Blackspots NI' is a small piece of software for doing 2 things:</p>
-<ul><li>Showing the most dangerous points on the roads network for cyclists</li>
-<li>Showing where road collisions involving bicycles have occurred previously</li></ul>
   	<div id="map"></div>
 
-<script>
-
+	<script>
 // Load OpenCycleMap as tile baselayer
   var OpenCycleMap = L.tileLayer('http://b.tile.thunderforest.com/cycle/{z}/{x}/{y}.png', {
 		maxZoom: 18,
@@ -63,10 +58,11 @@
   };
   
   var polygonStyle = {
-    weight: 4,
-	color: "#FFA500",
-    fillColor: "#FFA500",
-	fillOpacity: 0.8
+    opacity: 1,
+	weight: 4,
+	color: "red",
+    fillColor: "red",
+	fillOpacity: 0.86
   };
   
   var collisionsJson = L.geoJson(collisions, {
@@ -100,32 +96,38 @@
   
 // SetView to thon location
 map.locate({setView: true});
-
 function onLocationFound(e) {
         L.marker(e.latlng).addTo(map)
 }
-
 map.on('locationfound', onLocationFound);
-
 function onLocationError(e) {
     alert(e.message);
 }
 map.on('locationerror', onLocationError);
   	
-// Default route: from Belfast City Hall (54.597, -5.93) to Giant's Causeway (55.24, -6.51), add geocoder and Mapbox cycle router
+// Default route: from St John's Point (54.226, -5.659) to Giant's Causeway (55.24, -6.51), add geocoder and Mapbox cycle router
   var control = L.Routing.control({
     waypoints: [
-        L.latLng(54.597,-5.930),
+        L.latLng(54.226, -5.659),
         L.latLng(55.24, -6.51)
     ],
     routeWhileDragging: true,
     geocoder: L.Control.Geocoder.nominatim(),
     router: new L.Routing.Mapbox('pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg'),
 	waypointMode: "snap",
-	showAlternatives: true
+	showAlternatives: true,
+	show: false,
+	lineOptions: {
+		styles: [{color: 'blue', opacity: 0.15, weight: 9}, 
+				 {color: 'yellow', opacity: 0.8, weight: 6}, 
+				 {color: 'green', opacity: 1, weight: 2}]},
+	altLineOptions: {
+		styles: [{color: 'blue', opacity: 0.15, weight: 9}, 
+				 {color: 'yellow', opacity: 0.15, weight: 6}, 
+				 {color: 'yellow', opacity: 0.5, weight: 2}]}
   }).addTo(map);
-  
- 
+   
 </script>  
+
 </body>
 </html>
