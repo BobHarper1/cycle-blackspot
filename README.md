@@ -2,12 +2,13 @@
 ## Safety (and a disclaimer)
 *Disclaimer: I don't endorse 'alternative' routes as being safer and you should always exercise appropriate caution when cycling or driving whatever the circumstances.*
 
-I've provided this map for cyclists (and motorists) who want to take care on the road network by being aware of 'danger points' for cycles, and to help plan their trips accordingly. The clusters show areas where collisions have occurred previously in close proximity to one another. Obviously, this has two aspects to consider:
-* Areas (or routes through areas) where collisions or clusters are not displayed are not inherently 'safer'. Nowhere that cycles and motor vehicles pass close to one another is 100% safe.
+I've provided this map for cyclists (and motorists) who want to take care on the road network by being aware of 'danger points' for cycles, and to help plan their trips accordingly. The clusters show areas where collisions have occurred previously in close proximity to one another. Obviously, this has some aspects to consider:
+* Areas (or routes through areas) where previous collisions or clustering are not displayed are not inherently 'safer'. Nowhere that cycles and motor vehicles pass close to one another is 100% safe.
+* The most heavily used routes will have the most significant amounts of prior collisions. This doesn't mean that you're x times as likely to have an RTC on those routes over an alternative, and the inverse is true for light-use routes.
 * There is likely to be an underreporting of incidents to PSNI meaning that there are a number of collisions missing from the map. The best thing that you can do to correct this is to [report](http://www.psni.police.uk/collision_care_pack.pdf) any RTC to the police. It's a legal requirement in NI.
 
 ## The data
-Data for populating this map has come from PSNI records of road traffic collisions (RTCs) from 2004 to 2013 (inclusive) held on the UK Data Archive. In addition, I have also added data for killed or seriously injured ('KSI') collisions that the [Detail Data](http://data.nicva.org/dataset/road-traffic-collision-data-ksi-northern-ireland) project obtained through FoI from PSNI, as that dataset has not been added to the UK Data Archive as yet.
+Data for populating this map has come from PSNI records of road traffic collisions (RTCs) from 2004 to 2013 (inclusive) held on the UK Data Archive. In addition, I have also added data for killed or seriously injured ('KSI') collisions in 2014 that the [Detail Data](http://data.nicva.org/dataset/road-traffic-collision-data-ksi-northern-ireland) project obtained through FoI from PSNI, as that dataset has not been added to the UK Data Archive as yet (so no RTCs from 2014 that were of 'slight' severity are present).
 
 Each incident has involved a cycle where a person has been injured in the collision (slight, serious or fatally). 'Collision' does not necessarily mean colliding with another vehicle, it could involve a collision with road signage, but this occurs in only 2% of these cases. Also, the person injured is not necessarily the cyclist (two cars could collide with injuries and involve a cyclist who escapes uninjured, but that is unlikely). 
 
