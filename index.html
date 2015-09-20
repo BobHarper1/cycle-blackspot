@@ -50,12 +50,15 @@
         <section id="main-content">
           <h1>
 <a id="cycle-blackspot" class="anchor" href="#cycle-blackspot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cycle blackspots</h1>
-</div>
-</div>
-<p>pre-script</p>
-<div id="map"></div>
-<script>
 
+<p>Orange areas show clusters of previous collisions involving cycles. Use the layer selector to view the individual (unclustered) collisions that have occurred since 2004.</p>
+
+</div>
+</div>
+
+<div id="map"></div>
+
+<script>
 
 // Load OpenCycleMap as tile baselayer
   var OpenCycleMap = L.tileLayer('http://b.tile.thunderforest.com/cycle/{z}/{x}/{y}.png', {
@@ -134,7 +137,7 @@ map.on('locationerror', onLocationError);
 // Default route: from Belfast City Hall (54.597, -5.93) to Giant's Causeway (55.24, -6.51), add geocoder and Mapbox cycle router
   var control = L.Routing.control({
     waypoints: [
-        L.latLng(e.latlng),
+        L.latLng(54.226, -5.659),
         L.latLng(55.24, -6.51)
     ],
     routeWhileDragging: true,
@@ -142,11 +145,17 @@ map.on('locationerror', onLocationError);
     router: new L.Routing.Mapbox('pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg'),
 	waypointMode: "snap",
 	showAlternatives: true,
+	lineOptions: {
+		styles: [{color: 'blue', opacity: 0.15, weight: 9},
+				 {color: 'white', opacity: 0.8, weight: 6}, 
+				 {color: 'green', opacity: 1, weight: 2}]},
+	altLineOptions: {
+		styles: [{color: 'green', opacity: 0.15, weight: 9},
+				 {color: 'white', opacity: 0.8, weight: 6}, 
+				 {color: 'blue', opacity: 1, weight: 2}]}
   }).addTo(map);
    
 </script>  
-
-<p>post-script</p>
 
         </section>
 
