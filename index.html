@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset='utf-8'>
+
+	<meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
     <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
-	  <link rel="stylesheet" href="css/leaflet-routing-machine.css" />
-	  <link rel="stylesheet" href="css/leaflet-control-geocoder.css" />
+	<link rel="stylesheet" href="css/leaflet-routing-machine.css" />
+	<link rel="stylesheet" href="css/leaflet-control-geocoder.css" />
+
   	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
   	<script src="src/leaflet.ajax.min.js"></script>
   	<script src="src/leaflet-routing-machine.js"></script>
@@ -19,20 +23,22 @@
   	<script src="data/cycle_collisions.geojson" type="text/javascript"></script>
   	<script src="data/cycle_collisions_KSI_14_only.geojson" type="text/javascript"></script>
   	<script src="data/collision_clusters.geojson" type="text/javascript"></script>
+
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-<style>
-	body {
-		padding: 0;
-		margin: 0;
-	}
-	html, body, #map {
-		height: 100%;
-	}
-</style>
-  </head>
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		html, body, #map {
+			height: 100%;
+		}
+	</style>
+  
+</head>
 
   <body>
     <header>
@@ -47,8 +53,11 @@
       <div class="inner clearfix">
         <section id="main-content">
           <h1>
-<a id="cycle-blackspot" class="anchor" href="#cycle-blackspot" aria-hidden="true"><span class="octicon octicon-link"></span></a>cycle-blackspot</h1>
+<a id="cycle-blackspot" class="anchor" href="#cycle-blackspot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cycle blackspots</h1>
+<p>pre-script</p>
+<div id="map"></div>
 <script>
+
 
 // Load OpenCycleMap as tile baselayer
   var OpenCycleMap = L.tileLayer('http://b.tile.thunderforest.com/cycle/{z}/{x}/{y}.png', {
@@ -138,7 +147,7 @@ map.on('locationerror', onLocationError);
   }).addTo(map);
    
 </script>  
-
+<p>post-script</p>
 
         </section>
 
