@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<title>Cycle Blackspots</title>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+	<link rel="stylesheet" href="css/leaflet-routing-machine.css" />
+	<link rel="stylesheet" href="css/leaflet-control-geocoder.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+	<script src="src/leaflet.ajax.min.js"></script>
+  	<script src="src/leaflet-routing-machine.js"></script>
+  	<script src="src/lrm-mapbox-1.0.2.js"></script>
+  	<script src="src/leaflet-control-geocoder.js"></script>
+	<script src="data/cycle_collisions.geojson" type="text/javascript"></script>
+	<script src="data/cycle_collisions_KSI_14_only.geojson" type="text/javascript"></script>
+	<script src="data/collision_clusters.geojson" type="text/javascript"></script>
+	
+ <style>
+	body {
+		padding: 0;
+		margin: 0;
+	}
+	html, body, #map {
+		height: 100%;
+	}
+</style>
+
+</head>
+
+<body>
+  	<div id="map"></div>
+
+	<script>
+// Load OpenCycleMap as tile baselayer
+  var OpenCycleMap = L.tileLayer('http://b.tile.thunderforest.com/cycle/{z}/{x}/{y}.png', {
+		maxZoom: 18,
+		attribution: 'Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, ' +
+			'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Routing <a href="http://project-osrm.org/">OSRM</a>, ' +
+			'Map &copy; <a href="http://www.thunderforest.com/">OpenCycleMap</a>',
+	});	
+
+// Add collisions data as .GeoJSON layer with popup for each click event (a_type = severity of collision)
+// Add clusters data (default layer), no events
+  function onEachFeature(feature, layer) {
+        if (feature.properties && feature.properties.a_type) {
+        layer.bindPopup(feature.properties.a_type);
+    	}
+  }
+  
+  var collisionMarkerOptions = {
+    stroke: false,
+    radius: 8,
+    fillColor: "#000",
+    fillOpacity: 0.4
+  };
+  
+  var polygonStyle = {
+    opacity: 1,
+	weight: 4,
+	color: "red",
+    fillColor: "red",
+	fillOpacity: 0.86
+  };
+  
+  var collisionsJson = L.geoJson(collisions, {
+  	pointToLayer: function (feature, latlng) {
+        	return L.circleMarker(latlng, collisionMarkerOptions);
+  	},
+  	onEachFeature : onEachFeature
+  });
+  
+  var collisions14Json = L.geoJson(collisions14, {
+  	pointToLayer: function (feature, latlng) {
+        	return L.circleMarker(latlng, collisionMarkerOptions);
+  	},
+  	onEachFeature : onEachFeature
+  });
+  
+  var clustersLayer = L.geoJson(clusters, {style: polygonStyle});
+  
+  var collisionsLayer = L.layerGroup([collisionsJson, collisions14Json]);
+  
+  var overlayMap = {
+    "Collisions": collisionsLayer, 
+	"Clusters": clustersLayer
+  };
+  
+  var map = L.map('map', {
+  layers: [OpenCycleMap, clustersLayer]
+  });
+  
+  L.control.layers(null, overlayMap, {collapsed: false, position: 'topleft'}).addTo(map);
+  
+// SetView to thon location
+map.locate({setView: true});
+function onLocationFound(e) {
+        L.marker(e.latlng).addTo(map)
+}
+map.on('locationfound', onLocationFound);
+function onLocationError(e) {
+    alert(e.message);
+}
+map.on('locationerror', onLocationError);
+  	
+// Default route: from St John's Point (54.226, -5.659) to Giant's Causeway (55.24, -6.51), add geocoder and Mapbox cycle router
+  var control = L.Routing.control({
+    waypoints: [
+        L.latLng(54.226, -5.659),
+        L.latLng(55.24, -6.51)
+    ],
+    routeWhileDragging: true,
+    geocoder: L.Control.Geocoder.nominatim(),
+    router: new L.Routing.Mapbox('pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg'),
+	waypointMode: "snap",
+	showAlternatives: true,
+	show: false,
+	lineOptions: {
+		styles: [{color: 'blue', opacity: 0.15, weight: 9}, 
+				 {color: 'yellow', opacity: 0.8, weight: 6}, 
+				 {color: 'green', opacity: 1, weight: 2}]},
+	altLineOptions: {
+		styles: [{color: 'blue', opacity: 0.15, weight: 9}, 
+				 {color: 'yellow', opacity: 0.15, weight: 6}, 
+				 {color: 'yellow', opacity: 0.5, weight: 2}]}
+  }).addTo(map);
+   
+</script>  
+
+</body>
+</html>
