@@ -39,7 +39,7 @@
   <body>
     <header>
       <div class="inner">
-        <h1>Cycle-blackspot</h1>
+        <h1>Cycle Blackspots</h1>
         <h2>Areas of danger for cycles in Northern Ireland</h2>
         <a href="https://github.com/BobHarper1/cycle-blackspot" class="button"><small>View project on</small> GitHub</a>
       </div>
@@ -49,10 +49,10 @@
       <div class="inner clearfix">
         <section id="main-content">
           <h1>
-<a id="cycle-blackspot" class="anchor" href="#cycle-blackspot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cycle blackspots</h1>
+<a id="cycle-blackspot" class="anchor" href="#cycle-blackspot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cycle collision blackspots</h1>
 
 <p>Red areas show clusters of previous collisions involving cycles. Use the layer selector to view the individual (unclustered) collisions that have occurred since 2004.</p>
-
+<p>Clusters have been derived from the individual collisions, where two or more have occurred in close proximity to each other.</p>
 </div>
 </div>
 
@@ -61,7 +61,7 @@
 	<script>
 // Load OpenCycleMap as tile baselayer
   var OpenCycleMap = L.tileLayer('http://b.tile.thunderforest.com/cycle/{z}/{x}/{y}.png', {
-		maxZoom: 18,
+		maxZoom: 16,
 		attribution: 'Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, ' +
 			'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
 			'Routing <a href="http://project-osrm.org/">OSRM</a>, ' +
@@ -155,7 +155,7 @@ function onLocationError(e) {
 map.on('locationerror', onLocationError);
 
 </script>
-
+<p>The data relates to collisions reported to PSNI where an injury occurred and a cycle was involved.</p>
         </section>
 
         <aside id="sidebar">
