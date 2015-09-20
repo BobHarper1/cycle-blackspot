@@ -13,8 +13,11 @@
   	<script src="src/leaflet-routing-machine.js"></script>
   	<script src="src/lrm-mapbox-1.0.2.js"></script>
   	<script src="src/leaflet-control-geocoder.js"></script>
-  	
-<style>
+	<script src="data/cycle_collisions.geojson" type="text/javascript"></script>
+	<script src="data/cycle_collisions_KSI_14_only.geojson" type="text/javascript"></script>
+	<script src="data/collision_clusters.geojson" type="text/javascript"></script>
+	
+ <style>
 	body {
 		padding: 0;
 		margin: 0;
@@ -27,23 +30,74 @@
 </head>
 
 <body>
-<h1>Cycle collision blackspots Northern Ireland</h1>
+<h1>Cycle Blackspots Northern Ireland</h1>
+<p>'Cycle Blackspots NI' is a small piece of software for doing 2 things:</p>
+<ul><li>Showing the most dangerous points on the roads network for cyclists</li>
+<li>Showing where road collisions involving bicycles have occurred previously</li></ul>
   	<div id="map"></div>
 
 <script>
-// Load Leaflet map, view set for Belfast City Centre
-  var map = L.map('map');
 
-// Load OpenCycleMap
-  L.tileLayer('http://b.tile.thunderforest.com/cycle/{z}/{x}/{y}.png', {
+// Load OpenCycleMap as tile baselayer
+  var OpenCycleMap = L.tileLayer('http://b.tile.thunderforest.com/cycle/{z}/{x}/{y}.png', {
 		maxZoom: 18,
-		attribution: '<a href="http://leaftletjs.com">Leaflet</a>, ' + 
-			'Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, ' +
+		attribution: 'Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, ' +
 			'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
 			'Routing <a href="http://project-osrm.org/">OSRM</a>, ' +
 			'Map &copy; <a href="http://www.thunderforest.com/">OpenCycleMap</a>',
-	}).addTo(map);
+	});	
 
+// Add collisions data as .GeoJSON layer with popup for each click event (a_type = severity of collision)
+// Add clusters data (default layer), no events
+  function onEachFeature(feature, layer) {
+        if (feature.properties && feature.properties.a_type) {
+        layer.bindPopup(feature.properties.a_type);
+    	}
+  }
+  
+  var collisionMarkerOptions = {
+    stroke: false,
+    radius: 8,
+    fillColor: "#000",
+    fillOpacity: 0.4
+  };
+  
+  var polygonStyle = {
+    weight: 4,
+	color: "#FFA500",
+    fillColor: "#FFA500",
+	fillOpacity: 0.8
+  };
+  
+  var collisionsJson = L.geoJson(collisions, {
+  	pointToLayer: function (feature, latlng) {
+        	return L.circleMarker(latlng, collisionMarkerOptions);
+  	},
+  	onEachFeature : onEachFeature
+  });
+  
+  var collisions14Json = L.geoJson(collisions14, {
+  	pointToLayer: function (feature, latlng) {
+        	return L.circleMarker(latlng, collisionMarkerOptions);
+  	},
+  	onEachFeature : onEachFeature
+  });
+  
+  var clustersLayer = L.geoJson(clusters, {style: polygonStyle});
+  
+  var collisionsLayer = L.layerGroup([collisionsJson, collisions14Json]);
+  
+  var overlayMap = {
+    "Collisions": collisionsLayer, 
+	"Clusters": clustersLayer
+  };
+  
+  var map = L.map('map', {
+  layers: [OpenCycleMap, clustersLayer]
+  });
+  
+  L.control.layers(null, overlayMap, {collapsed: false, position: 'topleft'}).addTo(map);
+  
 // SetView to thon location
 map.locate({setView: true});
 
@@ -56,47 +110,22 @@ map.on('locationfound', onLocationFound);
 function onLocationError(e) {
     alert(e.message);
 }
-map.on('locationerror', onLocationError);	
-
-// Add collisions data as .GeoJSON layer with popup for each click event (a_type = severity of collision)
-  function onEachFeature(feature, layer) {
-        if (feature.properties && feature.properties.a_type) {
-        layer.bindPopup(feature.properties.a_type);
-    	}
-  }
-  
-  var geojsonMarkerOptions = {
-    stroke: false,
-    radius: 8,
-    fillColor: "#000",
-    fillOpacity: 0.5
-  };
-  
-  var geojsonLayer = new L.GeoJSON.AJAX("data/cycle-collisions.geojson", {
-  	pointToLayer: function (feature, latlng) {
-        	return L.circleMarker(latlng, geojsonMarkerOptions);
-  	},
-  	onEachFeature : onEachFeature
-    });
-	
-  var clusters = new L.GeoJSON.AJAX("data/collision-clusters.geojson");
-
-	geojsonLayer.addTo(map);
-	clusters.addTo(map);
-  
-  geojsonLayer.addUrl("data/cycle_collisions_KSI_14_only.geojson");
-	
+map.on('locationerror', onLocationError);
+  	
 // Default route: from Belfast City Hall (54.597, -5.93) to Giant's Causeway (55.24, -6.51), add geocoder and Mapbox cycle router
-  L.Routing.control({
+  var control = L.Routing.control({
     waypoints: [
         L.latLng(54.597,-5.930),
         L.latLng(55.24, -6.51)
     ],
     routeWhileDragging: true,
     geocoder: L.Control.Geocoder.nominatim(),
-    router: new L.Routing.Mapbox('pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg')
+    router: new L.Routing.Mapbox('pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg'),
+	waypointMode: "snap",
+	showAlternatives: true
   }).addTo(map);
-
+  
+  L.Routing.itinerary({collapsible: true, show: false}).addTo(control);  
 </script>  
 </body>
 </html>
