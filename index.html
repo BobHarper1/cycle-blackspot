@@ -40,7 +40,7 @@
     <header>
       <div class="inner">
         <h1>Cycle-blackspot</h1>
-        <h2>Showing areas of danger for cycles in Northern Ireland</h2>
+        <h2>Areas of danger for cycles in Northern Ireland</h2>
         <a href="https://github.com/BobHarper1/cycle-blackspot" class="button"><small>View project on</small> GitHub</a>
       </div>
     </header>
@@ -51,15 +51,14 @@
           <h1>
 <a id="cycle-blackspot" class="anchor" href="#cycle-blackspot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cycle blackspots</h1>
 
-<p>Orange areas show clusters of previous collisions involving cycles. Use the layer selector to view the individual (unclustered) collisions that have occurred since 2004.</p>
+<p>Red areas show clusters of previous collisions involving cycles. Use the layer selector to view the individual (unclustered) collisions that have occurred since 2004.</p>
 
 </div>
 </div>
 
 <div id="map"></div>
 
-<script>
-
+	<script>
 // Load OpenCycleMap as tile baselayer
   var OpenCycleMap = L.tileLayer('http://b.tile.thunderforest.com/cycle/{z}/{x}/{y}.png', {
 		maxZoom: 18,
@@ -85,10 +84,11 @@
   };
   
   var polygonStyle = {
-    weight: 4,
-	color: "#FFA500",
-    fillColor: "#FFA500",
-	fillOpacity: 0.8
+    opacity: 1,
+	weight: 4,
+	color: "red",
+    fillColor: "red",
+	fillOpacity: 0.86
   };
   
   var collisionsJson = L.geoJson(collisions, {
@@ -116,25 +116,11 @@
   
   var map = L.map('map', {
   layers: [OpenCycleMap, clustersLayer]
-  });
+  }).setView([54.5975, -6.5808], 8);
   
   L.control.layers(null, overlayMap, {collapsed: false, position: 'topleft'}).addTo(map);
-  
-// SetView to thon location
-map.locate({setView: true});
-
-function onLocationFound(e) {
-        L.marker(e.latlng).addTo(map)
-}
-
-map.on('locationfound', onLocationFound);
-
-function onLocationError(e) {
-    alert(e.message);
-}
-map.on('locationerror', onLocationError);
   	
-// Default route: from Belfast City Hall (54.597, -5.93) to Giant's Causeway (55.24, -6.51), add geocoder and Mapbox cycle router
+// Default route: from St John's Point (54.226, -5.659) to Giant's Causeway (55.24, -6.51), add geocoder and Mapbox cycle router
   var control = L.Routing.control({
     waypoints: [
         L.latLng(54.226, -5.659),
@@ -145,22 +131,35 @@ map.on('locationerror', onLocationError);
     router: new L.Routing.Mapbox('pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg'),
 	waypointMode: "snap",
 	showAlternatives: true,
+	fitSelectedRoutes: false,
+	show: false,
 	lineOptions: {
-		styles: [{color: 'blue', opacity: 0.15, weight: 9},
-				 {color: 'white', opacity: 0.8, weight: 6}, 
+		styles: [{color: 'blue', opacity: 0.15, weight: 9}, 
+				 {color: 'yellow', opacity: 0.8, weight: 6}, 
 				 {color: 'green', opacity: 1, weight: 2}]},
 	altLineOptions: {
-		styles: [{color: 'green', opacity: 0.15, weight: 9},
-				 {color: 'white', opacity: 0.8, weight: 6}, 
-				 {color: 'blue', opacity: 1, weight: 2}]}
+		styles: [{color: 'blue', opacity: 0.15, weight: 9}, 
+				 {color: 'yellow', opacity: 0.15, weight: 6}, 
+				 {color: 'yellow', opacity: 0.5, weight: 2}]}
   }).addTo(map);
    
-</script>  
+// SetView to thon location
+map.locate({setView: true});
+function onLocationFound(e) {
+        L.marker(e.latlng).addTo(map)
+}
+map.on('locationfound', onLocationFound);
+function onLocationError(e) {
+    alert(e.message);
+}
+map.on('locationerror', onLocationError);
+
+</script>
 
         </section>
 
         <aside id="sidebar">
-          <a href="https://github.com/BobHarper1/cycle-blackspot/zipball/master" class="button">
+          <br><a href="https://github.com/BobHarper1/cycle-blackspot/zipball/master" class="button">
             <small>Download</small>
             .zip file
           </a>
