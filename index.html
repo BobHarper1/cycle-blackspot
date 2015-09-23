@@ -93,17 +93,6 @@
   });
   
   L.control.layers(null, overlayMap, {collapsed: false, position: 'topleft'}).addTo(map);
-  
-// SetView to thon location
-map.locate({setView: true});
-function onLocationFound(e) {
-        L.marker(e.latlng).addTo(map)
-}
-map.on('locationfound', onLocationFound);
-function onLocationError(e) {
-    alert(e.message);
-}
-map.on('locationerror', onLocationError);
   	
 // Default route: from St John's Point (54.226, -5.659) to Giant's Causeway (55.24, -6.51), add geocoder and Mapbox cycle router
   var control = L.Routing.control({
