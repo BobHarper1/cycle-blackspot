@@ -1,36 +1,63 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <head>
 
-	<title>Cycle Blackspots</title>
-	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
-	<link rel="stylesheet" href="css/leaflet-routing-machine.css" />
-	<link rel="stylesheet" href="css/leaflet-control-geocoder.css" />
-	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
-	<script src="src/leaflet.ajax.min.js"></script>
-  	<script src="src/leaflet-routing-machine.js"></script>
-  	<script src="src/lrm-mapbox-1.0.2.js"></script>
-  	<script src="src/leaflet-control-geocoder.js"></script>
-	<script src="data/cycle_collisions.geojson" type="text/javascript"></script>
-	<script src="data/cycle_collisions_KSI_14_only.geojson" type="text/javascript"></script>
-	<script src="data/collision_clusters.geojson" type="text/javascript"></script>
-	
- <style>
-	body {
-		padding: 0;
-		margin: 0;
-	}
-	html, body, #map {
-		height: 100%;
-	}
-</style>
+	<meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+   	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <link rel="stylesheet" type="text/css" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+	<link rel="stylesheet" type="text/css" href="css/leaflet-routing-machine.css" />
+	<link rel="stylesheet" type="text/css" href="css/leaflet-control-geocoder.css" />
+
+  	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js" type="text/javascript"></script>
+  	<script src="src/leaflet.ajax.min.js" type="text/javascript"></script>
+  	<script src="src/leaflet-routing-machine.js" type="text/javascript"></script>
+  	<script src="src/lrm-mapbox-1.0.2.js" type="text/javascript"></script>
+  	<script src="src/leaflet-control-geocoder.js" type="text/javascript"></script>
+  	<script src="data/cycle_collisions.geojson" type="text/javascript"></script>
+  	<script src="data/cycle_collisions_KSI_14_only.geojson" type="text/javascript"></script>
+  	<script src="data/collision_clusters.geojson" type="text/javascript"></script>
+
+	<style>
+		body {
+			padding: 0;
+			margin: 0;
+		}
+		html, body, #map {
+			height: 500px;
+		}
+	</style>
+  
 </head>
 
-<body>
-  	<div id="map"></div>
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Cycle Blackspots</h1>
+        <h2>Areas of danger for cycles in Northern Ireland</h2>
+        <a href="https://github.com/BobHarper1/cycle-blackspot" class="button"><small>View project on</small> GitHub</a><br>
+		<p><a href="justmap"><font color="white"><strong>Fullscreen map (mobile)</strong></font></a></p>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="cycle-blackspot" class="anchor" href="#cycle-blackspot" aria-hidden="true"><span class="octicon octicon-link"></span></a>Cycle collision blackspots</h1>
+
+<p>Red areas show clusters of previous collisions involving cycles. Use the layer selector to view the individual (unclustered) collisions that have occurred since 2004.</p>
+<p>Clusters have been derived from the individual collisions, where two or more have occurred in close proximity to each other.</p>
+</div>
+</div>
+
+<div id="map"></div>
 
 	<script>
 // Load OpenCycleMap as tile baselayer
@@ -65,23 +92,14 @@
 	fillOpacity: 0.86
   };
   
-  var collisionsJson = L.geoJson(collisions, {
-  	pointToLayer: function (feature, latlng) {
-        	return L.circleMarker(latlng, collisionMarkerOptions);
-  	},
-  	onEachFeature : onEachFeature
-  });
-  
-  var collisions14Json = L.geoJson(collisions14, {
-  	pointToLayer: function (feature, latlng) {
-        	return L.circleMarker(latlng, collisionMarkerOptions);
-  	},
-  	onEachFeature : onEachFeature
-  });
-  
   var clustersLayer = L.geoJson(clusters, {style: polygonStyle});
   
-  var collisionsLayer = L.layerGroup([collisionsJson, collisions14Json]);
+  var collisionsLayer = L.geoJson(collisions, {
+  	pointToLayer: function (feature, latlng) {
+        	return L.circleMarker(latlng, collisionMarkerOptions);
+  	},
+  	onEachFeature : onEachFeature
+  });
   
   var overlayMap = {
     "Collisions": collisionsLayer, 
@@ -93,17 +111,6 @@
   });
   
   L.control.layers(null, overlayMap, {collapsed: false, position: 'topleft'}).addTo(map);
-  
-// SetView to thon location
-map.locate({setView: true});
-function onLocationFound(e) {
-        L.marker(e.latlng).addTo(map)
-}
-map.on('locationfound', onLocationFound);
-function onLocationError(e) {
-    alert(e.message);
-}
-map.on('locationerror', onLocationError);
   	
 // Default route: from St John's Point (54.226, -5.659) to Giant's Causeway (55.24, -6.51), add geocoder and Mapbox cycle router
   var control = L.Routing.control({
@@ -129,5 +136,26 @@ map.on('locationerror', onLocationError);
    
 </script>  
 
-</body>
+<p>The data relates to collisions reported to PSNI where an injury occurred and a cycle was involved. <a href="https://github.com/BobHarper1/cycle-blackspot/blob/master/README.md">More info</a></p>
+        </section>
+
+        <aside id="sidebar">
+          <br><a href="https://github.com/BobHarper1/cycle-blackspot/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/BobHarper1/cycle-blackspot/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/BobHarper1/cycle-blackspot"></a> maintained by <a href="https://github.com/BobHarper1">Bob Harper</a></p
+		  
+		  <p><a href="https://github.com/BobHarper1/cycle-blackspot/blob/master/README.md"><strong>Disclaimer</strong></a></p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a></p>
+        </aside>
+	
+  
+  </body>
 </html>
