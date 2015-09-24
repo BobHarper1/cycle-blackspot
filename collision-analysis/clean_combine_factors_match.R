@@ -1,17 +1,17 @@
-setwd("C:/Users/Bob/Dropbox/cycle-collisions-data/data-archive/vehicles/")
+setwd("C:/Users/bob.harper/Dropbox/cycle-collisions-data/data-archive/vehicles/")
 v_temp = list.files(pattern = "*.tab")
-for (i in 1:length(v_temp)) assign(v_temp[i], read.delim(v_temp[i], stringsAsFactors = TRUE))
+for (i in 1:length(v_temp)) assign(v_temp[i], read.delim(v_temp[i], stringsAsFactors = FALSE))
 
-setwd("C:/Users/Bob/Dropbox/cycle-collisions-data/data-archive/collisions/")
+setwd("C:/Users/bob.harper/Dropbox/cycle-collisions-data/data-archive/collisions/")
 c_temp = list.files(pattern = "*.tab")
-for (i in 1:length(c_temp)) assign(c_temp[i], read.delim(c_temp[i], stringsAsFactors = TRUE))
+for (i in 1:length(c_temp)) assign(c_temp[i], read.delim(c_temp[i], stringsAsFactors = FALSE))
 
 # From 2007, the sets have the additional column 'forreg', which isn't necessary
 # for our purposes, so remove column 17 and then bind rows
-vehicles1 <- rbind(vehicle2004.tab, vehicle2005.tab, vehicle2006.tab, make.row.names = FALSE)
-vehicles2 <- rbind(vehicle2007.tab, vehicle2008.tab, vehicle2009.tab, vehicle2010.tab, 
-                   make.row.names = FALSE)
-vehicles3 <- rbind(vehicle2011.tab, vehicle2012.tab, vehicle2013.tab, make.row.names = FALSE)
+vehicles1 <- rbind(vehicle1998.tab, vehicle1999.tab, vehicle2000.tab, vehicle2001.tab, vehicle2002.tab, 
+                   vehicle2003.tab, vehicle2004.tab, vehicle2005.tab, vehicle2006.tab, make.row.names = FALSE)
+vehicles2 <- rbind(vehicle2007.tab, vehicle2008.tab, vehicle2009.tab, vehicle2010.tab, make.row.names = FALSE)
+vehicles3 <- rbind(vehicle2011.tab, vehicle2012.tab, vehicle2013.tab, vehicle2014.tab, make.row.names = FALSE)
 vehicles2 <- vehicles2[-17]
 vehicles3 <- vehicles3[-17]
 
@@ -114,10 +114,11 @@ vehicles$v_hitr <- factor(vehicles$v_hitr,
 cycles <- vehicles[which(vehicles$v_type == "Pedal cycle"), ]
 
 # Apply the same binding process to the collision sets
-collision1 <- rbind(collision2004.tab, collision2005.tab, collision2006.tab, make.row.names = FALSE)
+collision1 <- rbind(collision1998.tab, collision1999.tab, collision2000.tab, collision2001.tab, collision2002.tab, 
+                    collision2003.tab, collision2004.tab, collision2005.tab, collision2006.tab, make.row.names = FALSE)
 collision2 <- collision2007.tab
 collision3 <- rbind(collision2008.tab, collision2009.tab, collision2010.tab, collision2011.tab, 
-                    collision2012.tab, collision2013.tab, make.row.names = FALSE)
+                    collision2012.tab, collision2013.tab, collision2014.tab, make.row.names = FALSE)
 
 collision1 <- collision1[-c(18:20)]
 collision2 <- collision2[-c(18:23)]
@@ -179,5 +180,8 @@ collisions$a_chaz <- factor(collisions$a_chaz,
 collisions$a_scene <- factor(collisions$a_scene, 
                              levels = c(1, 2), 
                              labels = c("Yes", "No"))
+
+rm(list=v_temp)
+rm(list=c_temp)
 
 cycle_collisions <- collisions[which(collisions$a_ref %in% cycles$a_ref), ] 
