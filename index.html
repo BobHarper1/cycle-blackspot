@@ -14,7 +14,6 @@
   	<script src="src/lrm-mapbox-1.0.2.js"></script>
   	<script src="src/leaflet-control-geocoder.js"></script>
 	<script src="data/cycle_collisions.geojson" type="text/javascript"></script>
-	<script src="data/cycle_collisions_KSI_14_only.geojson" type="text/javascript"></script>
 	<script src="data/collision_clusters.geojson" type="text/javascript"></script>
 	
  <style>
@@ -65,23 +64,14 @@
 	fillOpacity: 0.86
   };
   
-  var collisionsJson = L.geoJson(collisions, {
-  	pointToLayer: function (feature, latlng) {
-        	return L.circleMarker(latlng, collisionMarkerOptions);
-  	},
-  	onEachFeature : onEachFeature
-  });
-  
-  var collisions14Json = L.geoJson(collisions14, {
-  	pointToLayer: function (feature, latlng) {
-        	return L.circleMarker(latlng, collisionMarkerOptions);
-  	},
-  	onEachFeature : onEachFeature
-  });
-  
   var clustersLayer = L.geoJson(clusters, {style: polygonStyle});
   
-  var collisionsLayer = L.layerGroup([collisionsJson, collisions14Json]);
+  var collisionsLayer = L.geoJson(collisions, {
+  	pointToLayer: function (feature, latlng) {
+        	return L.circleMarker(latlng, collisionMarkerOptions);
+  	},
+  	onEachFeature : onEachFeature
+  });
   
   var overlayMap = {
     "Collisions": collisionsLayer, 
