@@ -62,7 +62,7 @@
 	<script>
 // Load OpenCycleMap as tile baselayer
   var OpenCycleMap = L.tileLayer('http://b.tile.thunderforest.com/cycle/{z}/{x}/{y}.png', {
-		maxZoom: 16,
+		maxZoom: 18,
 		attribution: 'Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, ' +
 			'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
 			'Routing <a href="http://project-osrm.org/">OSRM</a>, ' +
@@ -92,23 +92,14 @@
 	fillOpacity: 0.86
   };
   
-  var collisionsJson = L.geoJson(collisions, {
-  	pointToLayer: function (feature, latlng) {
-        	return L.circleMarker(latlng, collisionMarkerOptions);
-  	},
-  	onEachFeature : onEachFeature
-  });
-  
-  var collisions14Json = L.geoJson(collisions14, {
-  	pointToLayer: function (feature, latlng) {
-        	return L.circleMarker(latlng, collisionMarkerOptions);
-  	},
-  	onEachFeature : onEachFeature
-  });
-  
   var clustersLayer = L.geoJson(clusters, {style: polygonStyle});
   
-  var collisionsLayer = L.layerGroup([collisionsJson, collisions14Json]);
+  var collisionsLayer = L.geoJson(collisions, {
+  	pointToLayer: function (feature, latlng) {
+        	return L.circleMarker(latlng, collisionMarkerOptions);
+  	},
+  	onEachFeature : onEachFeature
+  });
   
   var overlayMap = {
     "Collisions": collisionsLayer, 
@@ -117,7 +108,7 @@
   
   var map = L.map('map', {
   layers: [OpenCycleMap, clustersLayer]
-  }).setView([54.5975, -6.5808], 8);
+  });
   
   L.control.layers(null, overlayMap, {collapsed: false, position: 'topleft'}).addTo(map);
   	
@@ -132,7 +123,6 @@
     router: new L.Routing.Mapbox('pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg'),
 	waypointMode: "snap",
 	showAlternatives: true,
-	fitSelectedRoutes: false,
 	show: false,
 	lineOptions: {
 		styles: [{color: 'blue', opacity: 0.15, weight: 9}, 
@@ -144,18 +134,8 @@
 				 {color: 'yellow', opacity: 0.5, weight: 2}]}
   }).addTo(map);
    
-// SetView to thon location
-map.locate({setView: true});
-function onLocationFound(e) {
-        L.marker(e.latlng).addTo(map)
-}
-map.on('locationfound', onLocationFound);
-function onLocationError(e) {
-    alert(e.message);
-}
-map.on('locationerror', onLocationError);
+</script>  
 
-</script>
 <p>The data relates to collisions reported to PSNI where an injury occurred and a cycle was involved. <a href="https://github.com/BobHarper1/cycle-blackspot/blob/master/README.md">More info</a></p>
         </section>
 
