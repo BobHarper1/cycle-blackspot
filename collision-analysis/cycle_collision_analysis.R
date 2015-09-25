@@ -1,4 +1,5 @@
 library(dplyr) # N.B. need to make sure plyr not running as these conflict
+library(tidyr)
 
 cycle_tbl <- tbl_df(cycle_collisions)
 
@@ -13,7 +14,7 @@ print(annual_type <-
   cycle_tbl %>% group_by(a_type, a_year) %>% summarise(num = length(a_year)))
 
 ## How many cyclists KSI per year?
-annual_KSIs <- cycle_tbl[which(cycle_tbl$a_ref %in% (casualties$a_ref[which(casualties$c_vtype==1 & casualties$c_sever < 3)])),] %>% group_by(a_year, a_type) %>% summarise(num = length(a_year))
+annual_KSIs <- cycle_tbl[which(cycle_tbl$a_ref %in% (casualties$a_ref[which(casualties$c_vtype==1 & casualties$c_sever < 3)])),] %>% group_by(a_year, a_type) %>% summarise(num = length(a_year)) %>% spread(a_type, num, fill=0)
 print(annual_KSIs)
 
 ## Baseline period (2004-2008) for Road Safety Strategy 2020, Fatal and Serious Injuries
@@ -36,3 +37,9 @@ other_veh %>% group_by(v_type) %>% summarise(no_vehicles = length(v_type))
 
 ## How many hit and runs?
 sum(other_veh$v_hitr == 'Hit and run')
+
+## All road users, KSI by year
+all_KSIs <- filter(casualties, c_sever==1) %>% group_by(a_year, c_sever) %>% summarise(num=length(a_year)) %>% spread(c_sever, num, fill=0)
+colnames(all_KSIs) <- (c("Year", "Fatal", "Serious"))
+all_KSIs <- mutate(all_KSIs, Total_KSI = Fatal + Serious)
+print(all_KSIs)
