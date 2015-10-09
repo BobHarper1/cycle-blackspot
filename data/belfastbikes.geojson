@@ -1,0 +1,38 @@
+var bikestations=
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+                                                                                
+"features": [
+{ "type": "Feature", "properties": { "Dock Number": 3902, "Name": "City Hall", "Latitude": 54.597175, "Longitude": -5.930970, "Station Size": 20 }, "geometry": { "type": "Point", "coordinates": [ -5.93097, 54.597175 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3904, "Name": "Donegall Quay", "Latitude": 54.601309, "Longitude": -5.921870, "Station Size": 16 }, "geometry": { "type": "Point", "coordinates": [ -5.92187, 54.601309 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3903, "Name": "Victoria Square \/ Victoria Street", "Latitude": 54.598224, "Longitude": -5.924024, "Station Size": 10 }, "geometry": { "type": "Point", "coordinates": [ -5.924024, 54.598224 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3906, "Name": "St George's Market \/ Cromac Square", "Latitude": 54.595158, "Longitude": -5.923503, "Station Size": 12 }, "geometry": { "type": "Point", "coordinates": [ -5.923503, 54.595158 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3905, "Name": "Central Station \/ Mays Meadow", "Latitude": 54.595340, "Longitude": -5.916438, "Station Size": 20 }, "geometry": { "type": "Point", "coordinates": [ -5.916438103, 54.59533998 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3930, "Name": "Central Station \/ East Bridge Street", "Latitude": 54.595408, "Longitude": -5.919283, "Station Size": 20 }, "geometry": { "type": "Point", "coordinates": [ -5.91928339, 54.59540835 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3907, "Name": "Gasworks (Cromac Street)", "Latitude": 54.592108, "Longitude": -5.925708, "Station Size": 12 }, "geometry": { "type": "Point", "coordinates": [ -5.925707817, 54.59210767 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3909, "Name": "Botanic Avenue \/ Shaftesbury Square", "Latitude": 54.589167, "Longitude": -5.933333, "Station Size": 16 }, "geometry": { "type": "Point", "coordinates": [ -5.933333333, 54.58916667 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3910, "Name": "Europa Bus Station \/ Blackstaff Square", "Latitude": 54.594774, "Longitude": -5.933173, "Station Size": 16 }, "geometry": { "type": "Point", "coordinates": [ -5.933173, 54.594774 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3911, "Name": "Great Victoria Street \/ Hope Street", "Latitude": 54.593513, "Longitude": -5.934387, "Station Size": 18 }, "geometry": { "type": "Point", "coordinates": [ -5.934387445, 54.59351251 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3913, "Name": "Smithfield \/ Winetavern Street", "Latitude": 54.601928, "Longitude": -5.933325, "Station Size": 12 }, "geometry": { "type": "Point", "coordinates": [ -5.933325291, 54.60192811 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3914, "Name": "Cathedral Gardens \/ York Street", "Latitude": 54.603713, "Longitude": -5.929348, "Station Size": 20 }, "geometry": { "type": "Point", "coordinates": [ -5.929348, 54.603713 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3915, "Name": "Carrick Hill\/St Patricks Church", "Latitude": 54.605514, "Longitude": -5.931711, "Station Size": 12 }, "geometry": { "type": "Point", "coordinates": [ -5.931710601, 54.60551385 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3916, "Name": "Dunbar Link \/ Gordon Street", "Latitude": 54.602338, "Longitude": -5.925418, "Station Size": 8 }, "geometry": { "type": "Point", "coordinates": [ -5.925418139, 54.60233828 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3917, "Name": "North Street \/ Waring Street", "Latitude": 54.600710, "Longitude": -5.928251, "Station Size": 16 }, "geometry": { "type": "Point", "coordinates": [ -5.928250551, 54.60071001 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3918, "Name": "Bankmore Square \/ Dublin Road", "Latitude": 54.592773, "Longitude": -5.931630, "Station Size": 16 }, "geometry": { "type": "Point", "coordinates": [ -5.931630135, 54.5927728 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3919, "Name": "College Square East", "Latitude": 54.597341, "Longitude": -5.934870, "Station Size": 16 }, "geometry": { "type": "Point", "coordinates": [ -5.934870243, 54.59734139 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3920, "Name": "Millfield \/ Divis Street", "Latitude": 54.599728, "Longitude": -5.936329, "Station Size": 18 }, "geometry": { "type": "Point", "coordinates": [ -5.936329365, 54.59972804 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3921, "Name": "Odyssey \/ Sydenham Road", "Latitude": 54.603867, "Longitude": -5.917125, "Station Size": 22 }, "geometry": { "type": "Point", "coordinates": [ -5.917124748, 54.60386706 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3922, "Name": "Corporation Square", "Latitude": 54.604722, "Longitude": -5.921389, "Station Size": 14 }, "geometry": { "type": "Point", "coordinates": [ -5.921388889, 54.60472222 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3923, "Name": "Alfred Street \/ St Malachy's Church", "Latitude": 54.594818, "Longitude": -5.927339, "Station Size": 14 }, "geometry": { "type": "Point", "coordinates": [ -5.9273386, 54.59481785 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3924, "Name": "Bradbury Place", "Latitude": 54.588357, "Longitude": -5.935156, "Station Size": 16 }, "geometry": { "type": "Point", "coordinates": [ -5.935156, 54.588357 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3925, "Name": "Royal Avenue \/ Castlecourt", "Latitude": 54.601213, "Longitude": -5.931362, "Station Size": 12 }, "geometry": { "type": "Point", "coordinates": [ -5.931361914, 54.60121341 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3926, "Name": "Cotton Court \/ Waring Street", "Latitude": 54.601058, "Longitude": -5.927060, "Station Size": 12 }, "geometry": { "type": "Point", "coordinates": [ -5.92705965, 54.60105804 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3931, "Name": "Writer's Square \/ St Anne's Cathedral", "Latitude": 54.602654, "Longitude": -5.929720, "Station Size": 16 }, "geometry": { "type": "Point", "coordinates": [ -5.92972, 54.602654 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3928, "Name": "Linenhall Street \/ Donegall Square South", "Latitude": 54.595924, "Longitude": -5.929892, "Station Size": 16 }, "geometry": { "type": "Point", "coordinates": [ -5.929892, 54.595924 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3929, "Name": "Arthur Street \/ Chichester Street", "Latitude": 54.597721, "Longitude": -5.927799, "Station Size": 18 }, "geometry": { "type": "Point", "coordinates": [ -5.927799, 54.597721 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3927, "Name": "Gasworks (Lagan Towpath)", "Latitude": 54.591251, "Longitude": -5.922562, "Station Size": 16 }, "geometry": { "type": "Point", "coordinates": [ -5.922562, 54.591251 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3908, "Name": "Waterfront", "Latitude": 54.597264, "Longitude": -5.921035, "Station Size": 24 }, "geometry": { "type": "Point", "coordinates": [ -5.921035409, 54.5972637 ] } },
+{ "type": "Feature", "properties": { "Dock Number": 3912, "Name": "Castle Place \/ Royal Avenue", "Latitude": 54.599298, "Longitude": -5.930080, "Station Size": 22 }, "geometry": { "type": "Point", "coordinates": [ -5.93008, 54.599298 ] } }
+]
+}

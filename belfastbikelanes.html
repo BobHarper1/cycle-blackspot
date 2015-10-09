@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<title>Belfast's 20mph Streets (12 October 2015)</title>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+	<script src="src/leaflet.ajax.min.js"></script>
+	<script src="data/belfastbikes.geojson" type="text/javascript"></script>
+	<script src="data/belfastcyclelanes.geojson" type="text/javascript"></script>
+	
+ <style>
+	body {
+		padding: 0;
+		margin: 0;
+	}
+	html, body, #map {
+		height: 100%;
+	}
+</style>
+
+</head>
+
+<body>
+  	<div id="map"></div>
+
+	<script>
+// Load Mapbox as tile baselayer
+  var mapbox = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+		maxZoom: 18,
+		id: 'mapbox.streets',
+		accessToken: 'pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg'
+	});	
+	
+// Add 20mph streets data and bind popup to give street name properties
+	var lanestyle = {
+		"color": "green",
+		"weight": 5,
+		"opacity": 0.8
+	};
+	
+	var bikelanes = L.geoJson(bikelanes, {style: lanestyle, onEachFeature: function (feature, layer) {
+        layer.bindPopup(feature.properties.name);
+    }
+	});
+	
+	var bikestations = L.geoJson(bikestations, {onEachFeature: function (feature, layer) {
+		layer.bindPopup(feature.properties.Name);
+    }
+	});
+  
+  var map = L.map('map', {
+  layers: [mapbox, bikelanes, bikestations]  
+  }).setView([54.6, -5.93],16);
+  
+</script>  
+
+</body>
+</html>
