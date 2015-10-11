@@ -35,7 +35,15 @@
 	});	
 	
 // Add 20mph streets data and bind popup to give street name properties
-  var twenty = L.geoJson(twenty, {onEachFeature: function (feature, layer) {
+  var twenty = L.geoJson(twenty, 
+	{style: 
+	function(feature) {
+        switch (feature.properties.highway) {
+            case "pedestrian": return {dashArray: "2,7"};
+        }
+    },
+	color: "red",
+	onEachFeature: function (feature, layer) {
         layer.bindPopup(feature.properties.name);
     }
 	});

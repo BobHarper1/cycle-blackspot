@@ -1,0 +1,9 @@
+-6.002998,54.545584,-5.846786,54.681771
+
+http://wiki.openstreetmap.org/wiki/Bicycle
+
+regexp_match( "highway", 'cycleway') OR regexp_match("other_tags", '"bicycle"=>"designated"')
+
+regexp_match("highway", 'footway') AND regexp_match( "other_tags", '"bicycle"=>"yes"')
+
+*add to selection

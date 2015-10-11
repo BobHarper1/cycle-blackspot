@@ -7,6 +7,7 @@
 	<title>Belfast's 20mph Streets (12 October 2015)</title>
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+	<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
 	<script src="src/leaflet.ajax.min.js"></script>
 	<script src="data/belfastbikes.geojson" type="text/javascript"></script>
 	<script src="data/belfastcyclelanes.geojson" type="text/javascript"></script>
@@ -28,16 +29,19 @@
 
 	<script>
 // Load Mapbox as tile baselayer
+  var watercolour = new L.StamenTileLayer("watercolor");
+  
   var mapbox = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
 		maxZoom: 18,
-		id: 'mapbox.streets',
+		id: 'mapbox.emerald',
 		accessToken: 'pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg'
 	});	
 	
 // Add 20mph streets data and bind popup to give street name properties
 	var lanestyle = {
 		"color": "green",
+		"dashArray": "10,5",
 		"weight": 5,
 		"opacity": 0.8
 	};
@@ -53,8 +57,8 @@
 	});
   
   var map = L.map('map', {
-  layers: [mapbox, bikelanes, bikestations]  
-  }).setView([54.6, -5.93],16);
+  layers: [watercolour, bikelanes, bikestations]  
+  }).setView([54.6, -5.93],14);
   
 </script>  
 
