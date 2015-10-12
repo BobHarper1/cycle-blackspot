@@ -9,6 +9,7 @@
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
 	<script src="src/leaflet.ajax.min.js"></script>
 	<script src="data/belfast_20mph_streets.geojson" type="text/javascript"></script>
+	<script src="data/20streets_pedestrians.geojson" type="text/javascript"></script>
 	
  <style>
 	body {
@@ -35,7 +36,7 @@
 	});	
 	
 // Add 20mph streets data and bind popup to give street name properties
-  var twenty = L.geoJson(twenty, 
+    var twenty = L.geoJson(twenty, 
 	{style: 
 	function(feature) {
         switch (feature.properties.highway) {
@@ -47,10 +48,32 @@
         layer.bindPopup(feature.properties.name);
     }
 	});
+	
+	var geojsonMarkerOptions = {
+		radius: 6,
+		fillColor: "yellow",
+		color: "#000",
+		weight: 1,
+		opacity: 1,
+		fillOpacity: 0.8
+	};
+	
+	var pedestrians = L.geoJson(pedestrians, {
+		pointToLayer: function (feature, latlng) {
+			return L.circleMarker(latlng, geojsonMarkerOptions);
+		},
+		onEachFeature: function (feature, layer) {
+			layer.bindPopup(feature.properties.a_type);
+		}
+	});
+	
+	var overlay = {"Pedestrian Collisions 1998-2014": pedestrians};
   
-  var map = L.map('map', {
-  layers: [mapbox, twenty]  
-  }).setView([54.6, -5.93],16);
+	var map = L.map('map', {
+		layers: [mapbox, twenty]  
+	}).setView([54.6, -5.93],16);
+  
+  L.control.layers(null, overlay, {collapsed: false, position: 'topleft'}).addTo(map);
   
 </script>  
 
