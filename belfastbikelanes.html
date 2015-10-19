@@ -70,6 +70,24 @@
 		"opacity": 0.8
 	};
 	
+	function onEachFeature(feature, layer) {
+		if (feature.properties.highway == 'path' && feature.properties.segregated == 'yes' || feature.properties.highway == 'footway' && feature.properties.segregated == 'yes' || feature.properties.highway == 'cycleway' && feature.properties.segregated == 'yes' || feature.properties.cycleway == 'track' && feature.properties.segregated == 'yes' || feature.properties['cycleway:left'] == 'track' && feature.properties.segregated == 'yes' || feature.properties['cycleway:right'] == 'track' && feature.properties.segregated == 'yes' || feature.properties.bicycle == 'use_sidepath' && feature.properties.segregated == 'yes') {
+			layer.bindPopup(feature.properties.name + "<br>This section: <b>off-road segregated</b>");
+			}
+		if (feature.properties.highway == 'path' && feature.properties.segregated != 'yes' || feature.properties.highway == 'footway' && feature.properties.segregated != 'yes' || feature.properties.highway == 'cycleway' && feature.properties.segregated != 'yes' || feature.properties.cycleway == 'track' && feature.properties.segregated != 'yes' || feature.properties.bicycle == 'use_sidepath' && feature.properties.segregated != 'yes') {
+			layer.bindPopup(feature.properties.name + "<br>This section: <b>off-road shared</b>");
+			}
+		if (feature.properties.cycleway == 'lane' && feature.properties.segregated == 'yes' || feature.properties["cycleway:left"] == 'lane' && feature.properties.segregated == 'yes' || feature.properties["cycleway:right"] == 'lane' && feature.properties.segregated == 'yes') {
+			layer.bindPopup(feature.properties.name + "<br>This section: <b>on-road segregated</b>");
+			}
+		if (feature.properties.cycleway == 'lane' && feature.properties.segregated != 'yes' || feature.properties["cycleway:left"] == 'lane' && feature.properties.segregated != 'yes' || feature.properties["cycleway:right"] == 'lane' && feature.properties.segregated != 'yes') {
+			layer.bindPopup(feature.properties.name + "<br>This section: <b>on-road shared</b>");
+			}
+		if (feature.properties.cycleway == 'share_busway' || feature.properties["cycleway:left"] == 'share_busway' || feature.properties["cycleway:right"] == 'share_busway') {
+			layer.bindPopup(feature.properties.name + "<br>This section: <b>bus lane (operating hours apply)</b>");
+		}
+	}
+	
 	var bikelanes = L.geoJson(bikelanes, {style: function(feature) {
 		if (feature.properties.highway == 'path' && feature.properties.segregated == 'yes' || feature.properties.highway == 'footway' && feature.properties.segregated == 'yes' || feature.properties.highway == 'cycleway' && feature.properties.segregated == 'yes' || feature.properties.cycleway == 'track' && feature.properties.segregated == 'yes' || feature.properties['cycleway:left'] == 'track' && feature.properties.segregated == 'yes' || feature.properties['cycleway:right'] == 'track' && feature.properties.segregated == 'yes' || feature.properties.bicycle == 'use_sidepath' && feature.properties.segregated == 'yes') {
             return off_segregated;
@@ -86,13 +104,12 @@
 		if (feature.properties.cycleway == 'share_busway' || feature.properties["cycleway:left"] == 'share_busway' || feature.properties["cycleway:right"] == 'share_busway') {
 			return buslane;
 		}
-    }, onEachFeature: function (feature, layer) {
-        layer.bindPopup(feature.properties.name);
-    }
+    }, 
+	onEachFeature: onEachFeature
 	});
 	
 	var bikestations = L.geoJson(bikestations, {onEachFeature: function (feature, layer) {
-		layer.bindPopup(feature.properties.Name);
+		layer.bindPopup("<p>Belfast Bikes: </p>".bold() + feature.properties.Name);
     }
 	});
   
