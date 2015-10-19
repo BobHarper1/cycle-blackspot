@@ -71,9 +71,11 @@
   
 	var map = L.map('map', {
 		layers: [mapbox, twenty]  
-	}).setView([54.6, -5.93],16);
+	}).setView([54.601, -5.93],16);
   
   L.control.layers(null, overlay, {collapsed: false, position: 'topleft'}).addTo(map);
+  
+  L.imageOverlay("20mph.png", [[54.596, -5.92],[54.602, -5.91]]).addTo(map);
   
 </script>  
 

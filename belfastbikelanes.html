@@ -4,13 +4,13 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-	<title>Belfast's 20mph Streets (12 October 2015)</title>
+	<title>Belfast's Bike Lanes</title>
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
 	<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
 	<script src="src/leaflet.ajax.min.js"></script>
 	<script src="data/belfastbikes.geojson" type="text/javascript"></script>
-	<script src="data/belfastcyclelanes.geojson" type="text/javascript"></script>
+	<script src="data/belfast_cycling.geojson" type="text/javascript"></script>
 	
  <style>
 	body {
@@ -29,8 +29,6 @@
 
 	<script>
 // Load Mapbox as tile baselayer
-  var watercolour = new L.StamenTileLayer("watercolor");
-  
   var mapbox = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
 		maxZoom: 18,
@@ -39,14 +37,56 @@
 	});	
 	
 // Add 20mph streets data and bind popup to give street name properties
-	var lanestyle = {
+	var off_segregated = {
 		"color": "green",
-		"dashArray": "10,5",
 		"weight": 5,
 		"opacity": 0.8
 	};
 	
-	var bikelanes = L.geoJson(bikelanes, {style: lanestyle, onEachFeature: function (feature, layer) {
+	var off_shared = {
+		"color": "green",
+		"dashArray": "3,10",
+		"weight": 5,
+		"opacity": 0.8
+	};
+	
+	var on_segregated = {
+		"color": "blue",
+		"weight": 5,
+		"opacity": 0.8
+	};
+	
+	var on_shared = {
+		"color": "blue",
+		"dashArray": "3,10",
+		"weight": 5,
+		"opacity": 0.8
+	};
+	
+	var buslane = {
+		"color": "#FF0066",
+		"dashArray": "3,10",
+		"weight": 5,
+		"opacity": 0.8
+	};
+	
+	var bikelanes = L.geoJson(bikelanes, {style: function(feature) {
+		if (feature.properties.highway == 'path' && feature.properties.segregated == 'yes' || feature.properties.highway == 'footway' && feature.properties.segregated == 'yes' || feature.properties.highway == 'cycleway' && feature.properties.segregated == 'yes' || feature.properties.cycleway == 'track' && feature.properties.segregated == 'yes' || feature.properties['cycleway:left'] == 'track' && feature.properties.segregated == 'yes' || feature.properties['cycleway:right'] == 'track' && feature.properties.segregated == 'yes' || feature.properties.bicycle == 'use_sidepath' && feature.properties.segregated == 'yes') {
+            return off_segregated;
+		}
+		if (feature.properties.highway == 'path' && feature.properties.segregated != 'yes' || feature.properties.highway == 'footway' && feature.properties.segregated != 'yes' || feature.properties.highway == 'cycleway' && feature.properties.segregated != 'yes' || feature.properties.cycleway == 'track' && feature.properties.segregated != 'yes' || feature.properties.bicycle == 'use_sidepath' && feature.properties.segregated != 'yes') {
+            return off_shared;
+		}
+		if (feature.properties.cycleway == 'lane' && feature.properties.segregated == 'yes' || feature.properties["cycleway:left"] == 'lane' && feature.properties.segregated == 'yes' || feature.properties["cycleway:right"] == 'lane' && feature.properties.segregated == 'yes') {
+            return on_segregated;
+		}
+		if (feature.properties.cycleway == 'lane' && feature.properties.segregated != 'yes' || feature.properties["cycleway:left"] == 'lane' && feature.properties.segregated != 'yes' || feature.properties["cycleway:right"] == 'lane' && feature.properties.segregated != 'yes') {
+            return on_shared;
+		}
+		if (feature.properties.cycleway == 'share_busway' || feature.properties["cycleway:left"] == 'share_busway' || feature.properties["cycleway:right"] == 'share_busway') {
+			return buslane;
+		}
+    }, onEachFeature: function (feature, layer) {
         layer.bindPopup(feature.properties.name);
     }
 	});
@@ -57,7 +97,7 @@
 	});
   
   var map = L.map('map', {
-  layers: [watercolour, bikelanes, bikestations]  
+  layers: [mapbox, bikelanes, bikestations]  
   }).setView([54.6, -5.93],14);
   
 </script>  

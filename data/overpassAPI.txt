@@ -1,0 +1,31 @@
+[out:json][timeout:25];
+// gather results
+(
+ // shared or segregated off-road cycleways (paths)
+  way["highway"="path"]["bicycle"="yes"]({{bbox}});
+  way["highway"="path"]["bicycle"="designated"]({{bbox}});
+  way["highway"="footway"]["bicycle"="yes"]({{bbox}});
+  way["highway"="footway"]["bicycle"="designated"]({{bbox}});
+  way["highway"="cycleway"]({{bbox}});
+  
+ // shared or segregated off-road cycleways (tracks alongside roads)
+  way["cycleway"="track"]({{bbox}});
+  way["cycleway:left"="track"]({{bbox}});
+  way["cycleway:right"="track"]({{bbox}});
+  way["bicycle"="use_sidepath"]({{bbox}});
+  
+ // on-road cycle lanes
+  way["cycleway"="lane"]({{bbox}});
+  way["cycleway:left"="lane"]({{bbox}});
+  way["cycleway:right"="lane"]({{bbox}});
+  
+ // on-road bus lanes (bicycles permitted)
+  way["cycleway"="share_busway"]({{bbox}});
+  way["cycleway:left"="share_busway"]({{bbox}});
+  way["cycleway:right"="share_busway"]({{bbox}});
+  
+);
+// print results
+out body;
+>;
+out skel qt;
