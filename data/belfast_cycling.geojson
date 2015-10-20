@@ -3,7 +3,7 @@ var bikelanes =
   "type": "FeatureCollection",
   "generator": "overpass-turbo",
   "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
-  "timestamp": "2015-10-20T15:56:02Z",
+  "timestamp": "2015-10-20T16:01:02Z",
   "features": [
     {
       "type": "Feature",
