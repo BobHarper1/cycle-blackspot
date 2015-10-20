@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
 	<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
-	<script src="src/leaflet.ajax.min.js"></script>
 	<script src="data/belfastbikes.geojson" type="text/javascript"></script>
 	<script src="data/belfast_cycling.geojson" type="text/javascript"></script>
 	
@@ -63,7 +62,7 @@
 		"opacity": 0.8
 	};
 	
-	var buslane = {
+	var busshare = {
 		"color": "#FF0066",
 		"dashArray": "3,10",
 		"weight": 5,
@@ -78,21 +77,21 @@
 			layer.bindPopup(feature.properties.name + "<br>This section: <b>off-road shared</b>");
 			}
 		if (feature.properties.cycleway == 'lane' && feature.properties.segregated == 'yes' || feature.properties["cycleway:left"] == 'lane' && feature.properties.segregated == 'yes' || feature.properties["cycleway:right"] == 'lane' && feature.properties.segregated == 'yes') {
-			layer.bindPopup(feature.properties.name + "<br>This section: <b>on-road segregated</b>");
+			layer.bindPopup(feature.properties.name + "<br>This section: <b>on-road protected lane</b>");
 			}
 		if (feature.properties.cycleway == 'lane' && feature.properties.segregated != 'yes' || feature.properties["cycleway:left"] == 'lane' && feature.properties.segregated != 'yes' || feature.properties["cycleway:right"] == 'lane' && feature.properties.segregated != 'yes') {
-			layer.bindPopup(feature.properties.name + "<br>This section: <b>on-road shared</b>");
+			layer.bindPopup(feature.properties.name + "<br>This section: <b>on-road advisory lane</b>");
 			}
 		if (feature.properties.cycleway == 'share_busway' || feature.properties["cycleway:left"] == 'share_busway' || feature.properties["cycleway:right"] == 'share_busway') {
-			layer.bindPopup(feature.properties.name + "<br>This section: <b>bus lane (operating hours apply)</b>");
+			layer.bindPopup(feature.properties.name + "<br>This section: <b>full-time shared bus and cycle lane</b>");
+			}
 		}
-	}
 	
 	var bikelanes = L.geoJson(bikelanes, {style: function(feature) {
 		if (feature.properties.highway == 'path' && feature.properties.segregated == 'yes' || feature.properties.highway == 'footway' && feature.properties.segregated == 'yes' || feature.properties.highway == 'cycleway' && feature.properties.segregated == 'yes' || feature.properties.cycleway == 'track' && feature.properties.segregated == 'yes' || feature.properties['cycleway:left'] == 'track' && feature.properties.segregated == 'yes' || feature.properties['cycleway:right'] == 'track' && feature.properties.segregated == 'yes' || feature.properties.bicycle == 'use_sidepath' && feature.properties.segregated == 'yes') {
             return off_segregated;
 		}
-		if (feature.properties.highway == 'path' && feature.properties.segregated != 'yes' || feature.properties.highway == 'footway' && feature.properties.segregated != 'yes' || feature.properties.highway == 'cycleway' && feature.properties.segregated != 'yes' || feature.properties.cycleway == 'track' && feature.properties.segregated != 'yes' || feature.properties.bicycle == 'use_sidepath' && feature.properties.segregated != 'yes') {
+		if (feature.properties.highway == 'path' && feature.properties.segregated != 'yes' || feature.properties.highway == 'footway' && feature.properties.segregated != 'yes' || feature.properties.highway == 'cycleway' && feature.properties.segregated != 'yes' || feature.properties.cycleway == 'track' && feature.properties.segregated != 'yes' || feature.properties['cycleway:left'] == 'track' && feature.properties.segregated != 'yes' ||  feature.properties['cycleway:right'] == 'track' && feature.properties.segregated != 'yes' || feature.properties.bicycle == 'use_sidepath' && feature.properties.segregated != 'yes') {
             return off_shared;
 		}
 		if (feature.properties.cycleway == 'lane' && feature.properties.segregated == 'yes' || feature.properties["cycleway:left"] == 'lane' && feature.properties.segregated == 'yes' || feature.properties["cycleway:right"] == 'lane' && feature.properties.segregated == 'yes') {
@@ -102,7 +101,7 @@
             return on_shared;
 		}
 		if (feature.properties.cycleway == 'share_busway' || feature.properties["cycleway:left"] == 'share_busway' || feature.properties["cycleway:right"] == 'share_busway') {
-			return buslane;
+			return busshare;
 		}
     }, 
 	onEachFeature: onEachFeature

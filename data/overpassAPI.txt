@@ -19,10 +19,10 @@
   way["cycleway:left"="lane"]({{bbox}});
   way["cycleway:right"="lane"]({{bbox}});
   
- // on-road bus lanes (bicycles permitted)
-  way["cycleway"="share_busway"]({{bbox}});
-  way["cycleway:left"="share_busway"]({{bbox}});
-  way["cycleway:right"="share_busway"]({{bbox}});
+ // special: contraflow shared busway and cycleway
+  way["lanes:psv:backward"="1"]["cycleway"="share_busway"]({{bbox}});
+  way["lanes:psv:backward"="1"]["cycleway:left"="share_busway"]({{bbox}});
+  way["lanes:psv:backward"="1"]["cycleway:right"="share_busway"]({{bbox}});
   
 );
 // print results
