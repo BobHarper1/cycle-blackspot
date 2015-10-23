@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<title>Belfast's Bike Lanes</title>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
+	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="src/leaflet-osm.js" tpye="text/javascript"></script>
+	<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+	<script src="data/belfastbikes.geojson" type="text/javascript"></script>
+	
+	
+ <style>
+	body {
+		padding: 0;
+		margin: 0;
+	}
+	html, body, #map {
+		height: 100%;
+	}
+</style>
+
+</head>
+
+<body>
+  	<div id="map"></div>
+
+	<script>
+// Load Mapbox as tile baselayer
+  var mapbox = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+    attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
+		maxZoom: 18,
+		id: 'mapbox.emerald',
+		accessToken: 'pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg'
+	});	
+	
+// Add 20mph streets data and bind popup to give street name properties
+	var off_segregated = {
+		"color": "green",
+		"weight": 5,
+		"opacity": 0.8
+	};
+	
+	var off_shared = {
+		"color": "green",
+		"dashArray": "3,10",
+		"weight": 5,
+		"opacity": 0.8
+	};
+	
+	var on_segregated = {
+		"color": "blue",
+		"weight": 5,
+		"opacity": 0.8
+	};
+	
+	var on_shared = {
+		"color": "blue",
+		"dashArray": "3,10",
+		"weight": 5,
+		"opacity": 0.8
+	};
+	
+	var busshare = {
+		"color": "#FF0066",
+		"dashArray": "3,10",
+		"weight": 5,
+		"opacity": 0.8
+	};
+	
+	var bikestations = L.geoJson(bikestations, {onEachFeature: function (feature, layer) {
+		layer.bindPopup("<p>Belfast Bikes: </p>".bold() + feature.properties.Name);
+    }
+	});
+  
+    	$.ajax({
+		url: "http://overpass-api.de/api/interpreter?data=%5Bout%3Axml%5D%5Btimeout%3A25%5D%3B%0A%2F%2F%20gather%20results%0A%28%0A%20%2F%2F%20shared%20or%20segregated%20off-road%20cycleways%20%28paths%29%0A%20%20way%5B%22highway%22%3D%22path%22%5D%5B%22bicycle%22%3D%22yes%22%5D%2854.58636348148578%2C-5.948581695556641%2C54.607346984341575%2C-5.903306007385254%29%3B%0A%20%20way%5B%22highway%22%3D%22path%22%5D%5B%22bicycle%22%3D%22designated%22%5D%2854.58636348148578%2C-5.948581695556641%2C54.607346984341575%2C-5.903306007385254%29%3B%0A%20%20way%5B%22highway%22%3D%22footway%22%5D%5B%22bicycle%22%3D%22yes%22%5D%2854.58636348148578%2C-5.948581695556641%2C54.607346984341575%2C-5.903306007385254%29%3B%0A%20%20way%5B%22highway%22%3D%22footway%22%5D%5B%22bicycle%22%3D%22designated%22%5D%2854.58636348148578%2C-5.948581695556641%2C54.607346984341575%2C-5.903306007385254%29%3B%0A%20%20way%5B%22highway%22%3D%22cycleway%22%5D%2854.58636348148578%2C-5.948581695556641%2C54.607346984341575%2C-5.903306007385254%29%3B%0A%20%20%0A%20%2F%2F%20shared%20or%20segregated%20off-road%20cycleways%20%28tracks%20alongside%20roads%29%0A%20%20way%5B~%22%5Ecycleway.*%24%22~%22track%22%5D%2854.58636348148578%2C-5.948581695556641%2C54.607346984341575%2C-5.903306007385254%29%3B%0A%20%20way%5B%22bicycle%22%3D%22use_sidepath%22%5D%2854.58636348148578%2C-5.948581695556641%2C54.607346984341575%2C-5.903306007385254%29%3B%0A%20%20%0A%20%2F%2F%20on-road%20cycle%20lanes%0A%20%20way%5B~%22%5Ecycleway.*%24%22~%22lane%22%5D%2854.58636348148578%2C-5.948581695556641%2C54.607346984341575%2C-5.903306007385254%29%3B%0A%0A%20%2F%2F%20special%3A%20full-time%20shared%20busway%20and%20cycleway%0A%20%20way%5B%22lanes%3Apsv%3Abackward%22%3D%221%22%5D%5B~%22%5Ecycleway.*%24%22~%22share_busway%22%5D%2854.58636348148578%2C-5.948581695556641%2C54.607346984341575%2C-5.903306007385254%29%3B%0A%20%20way%5B%22highway%22%3D%22service%22%5D%5B%22access%22%3D%22no%22%5D%5B%22bicycle%22%3D%22yes%22%5D%2854.58636348148578%2C-5.948581695556641%2C54.607346984341575%2C-5.903306007385254%29%3B%0A%0A%29%3B%0A%2F%2F%20print%20results%0Aout%20body%3B%0A%3E%3B%0Aout%20skel%20qt%3B",
+		dataType: "xml",
+		success: function (xml) {
+			var layer = new L.OSM.DataLayer(xml).addTo(map);
+			}
+		});
+    
+  var map = L.map('map', {
+  layers: [mapbox, bikestations]  
+  }).setView([54.6, -5.93],14);
+  
+
+  
+</script>  
+
+</body>
+</html>

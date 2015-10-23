@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.css" />
 	<script src="http://cdn.leafletjs.com/leaflet-0.7.5/leaflet.js"></script>
 	<script type="text/javascript" src="http://maps.stamen.com/js/tile.stamen.js?v1.3.0"></script>
+	<link rel="stylesheet" href="css/Leaflet.EditInOSM.css" />
+	<script src="src/Leaflet.EditInOSM.js"></script>
 	<script src="data/belfastbikes.geojson" type="text/javascript"></script>
 	<script src="data/belfast_cycling.geojson" type="text/javascript"></script>
 	
@@ -107,13 +109,18 @@
 	onEachFeature: onEachFeature
 	});
 	
-	var bikestations = L.geoJson(bikestations, {onEachFeature: function (feature, layer) {
-		layer.bindPopup("<p>Belfast Bikes: </p>".bold() + feature.properties.Name);
+	var bikestations = L.geoJson(bikestations, {
+	pointToLayer: function (feature, latlng) {
+        return L.circleMarker(latlng);
+    },
+	onEachFeature: function (feature, layer) {
+		layer.bindPopup("Belfast Bikes: ".bold() + "<br>" + feature.properties.Name + "<p><a href='http://www.belfastbikes.co.uk/en/belfast/'><strong>Visit Belfast Bikes</strong></a></p>");
     }
 	});
   
   var map = L.map('map', {
-  layers: [mapbox, bikelanes, bikestations]  
+  layers: [mapbox, bikelanes, bikestations], 
+  editInOSMControlOptions: {position: "bottomright", zoomThreshold: 13}  
   }).setView([54.6, -5.93],14);
   
 </script>  
