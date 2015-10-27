@@ -96,10 +96,10 @@
 		if (feature.properties.highway == 'path' && feature.properties.segregated != 'yes' || feature.properties.highway == 'footway' && feature.properties.segregated != 'yes' || feature.properties.highway == 'cycleway' && feature.properties.segregated != 'yes' || feature.properties.cycleway == 'track' && feature.properties.segregated != 'yes' || feature.properties['cycleway:left'] == 'track' && feature.properties.segregated != 'yes' ||  feature.properties['cycleway:right'] == 'track' && feature.properties.segregated != 'yes' || feature.properties.bicycle == 'use_sidepath' && feature.properties.segregated != 'yes') {
             return off_shared;
 		}
-		if (feature.properties.cycleway == 'lane' && feature.properties.segregated == 'yes' || feature.properties["cycleway:left"] == 'lane' && feature.properties.segregated == 'yes' || feature.properties["cycleway:right"] == 'lane' && feature.properties.segregated == 'yes') {
+		if (feature.properties.cycleway == 'lane' && feature.properties.segregated == 'yes' || feature.properties["cycleway:left"] == 'lane' && feature.properties.segregated == 'yes' || feature.properties["cycleway:right"] == 'lane' && feature.properties.segregated == 'yes'  || feature.properties.cycleway == 'opposite_lane' && feature.properties.segregated == 'yes' || feature.properties["cycleway:left"] == 'opposite_lane' && feature.properties.segregated == 'yes' || feature.properties["cycleway:right"] == 'opposite_lane' && feature.properties.segregated == 'yes') {
             return on_segregated;
 		}
-		if (feature.properties.cycleway == 'lane' && feature.properties.segregated != 'yes' || feature.properties["cycleway:left"] == 'lane' && feature.properties.segregated != 'yes' || feature.properties["cycleway:right"] == 'lane' && feature.properties.segregated != 'yes') {
+		if (feature.properties.cycleway == 'lane' && feature.properties.segregated != 'yes' || feature.properties["cycleway:left"] == 'lane' && feature.properties.segregated != 'yes' || feature.properties["cycleway:right"] == 'lane' && feature.properties.segregated != 'yes' || feature.properties.cycleway == 'opposite_lane' && feature.properties.segregated != 'yes' || feature.properties["cycleway:left"] == 'opposite_lane' && feature.properties.segregated != 'yes' || feature.properties["cycleway:right"] == 'opposite_lane' && feature.properties.segregated != 'yes') {
             return on_shared;
 		}
 		if (feature.properties.cycleway == 'share_busway' || feature.properties["cycleway:left"] == 'share_busway' || feature.properties["cycleway:right"] == 'share_busway') {
@@ -114,7 +114,8 @@
         return L.circleMarker(latlng);
     },
 	onEachFeature: function (feature, layer) {
-		layer.bindPopup("Belfast Bikes: ".bold() + "<br>" + feature.properties.Name + "<p><a href='http://www.belfastbikes.co.uk/en/belfast/'><strong>Visit Belfast Bikes</strong></a></p>");
+		layer.bindPopup("Belfast Bikes: ".bold() + "<br>" + feature.properties.Name + "<p><a href='http://www.belfastbikes.co.uk/en/belfast/'><strong>Visit Belfast Bikes</strong></a></p>",
+						closeOnClick: false);
     }
 	});
   
