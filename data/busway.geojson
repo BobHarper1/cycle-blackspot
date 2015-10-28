@@ -1,0 +1,192 @@
+var busway =
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2015-10-28T15:27:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "way/151558590",
+      "properties": {
+        "@id": "way/151558590",
+        "access": "no",
+        "bicycle": "yes",
+        "highway": "service",
+        "name": "Nelson Street",
+        "oneway": "yes",
+        "psv": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -5.9212402,
+            54.6095228
+          ],
+          [
+            -5.9213981,
+            54.6093426
+          ],
+          [
+            -5.9214933,
+            54.609234
+          ],
+          [
+            -5.9216811,
+            54.6091067
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/173999359",
+      "properties": {
+        "@id": "way/173999359",
+        "bicycle": "yes",
+        "cycleway:right": "share_busway",
+        "foot": "yes",
+        "highway": "trunk",
+        "lanes:psv:backward": "1",
+        "name": "Corporation Street",
+        "oneway": "yes",
+        "oneway:bicycle": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -5.9212176,
+            54.6080993
+          ],
+          [
+            -5.9217558,
+            54.6073273
+          ],
+          [
+            -5.922119,
+            54.6068151
+          ],
+          [
+            -5.9224632,
+            54.6062986
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/182192804",
+      "properties": {
+        "@id": "way/182192804",
+        "cycleway:right": "share_busway",
+        "highway": "tertiary",
+        "lanes:psv:backward": "1",
+        "name": "Nelson Street",
+        "oneway": "yes",
+        "oneway:bicycle": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -5.9212402,
+            54.6095228
+          ],
+          [
+            -5.9211282,
+            54.609707
+          ],
+          [
+            -5.9210383,
+            54.6099131
+          ],
+          [
+            -5.9209202,
+            54.6102527
+          ],
+          [
+            -5.9209073,
+            54.6103619
+          ],
+          [
+            -5.9208456,
+            54.6108861
+          ],
+          [
+            -5.9208413,
+            54.6109226
+          ],
+          [
+            -5.9208328,
+            54.6109955
+          ],
+          [
+            -5.9207603,
+            54.6114357
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/182192805",
+      "properties": {
+        "@id": "way/182192805",
+        "access": "no",
+        "bicycle": "yes",
+        "highway": "service",
+        "oneway": "yes",
+        "psv": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -5.9203553,
+            54.6118212
+          ],
+          [
+            -5.9204964,
+            54.6115582
+          ],
+          [
+            -5.9207603,
+            54.6114357
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "way/221747645",
+      "properties": {
+        "@id": "way/221747645",
+        "cycleway:right": "share_busway",
+        "highway": "trunk",
+        "lanes:psv:backward": "1",
+        "name": "Garmoyle Street",
+        "oneway": "yes",
+        "oneway:bicycle": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -5.9205973,
+            54.6088142
+          ],
+          [
+            -5.9210433,
+            54.6083008
+          ],
+          [
+            -5.9212176,
+            54.6080993
+          ]
+        ]
+      }
+    }
+  ]
+}
