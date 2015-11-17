@@ -56,11 +56,11 @@
   };
   
   var polygonStyle = {
-    opacity: 1,
+    opacity: 0.8,
 	weight: 4,
 	color: "red",
     fillColor: "red",
-	fillOpacity: 0.86
+	fillOpacity: 0.6
   };
   
   var clustersLayer = L.geoJson(clusters, {style: polygonStyle});
@@ -79,31 +79,10 @@
   
   var map = L.map('map', {
   layers: [OpenCycleMap, clustersLayer]
-  });
+  }).setView([54.6, -5.93],9);
   
   L.control.layers(null, overlayMap, {collapsed: false, position: 'topleft'}).addTo(map);
   	
-// Default route: from St John's Point (54.226, -5.659) to Giant's Causeway (55.24, -6.51), add geocoder and Mapbox cycle router
-  var control = L.Routing.control({
-    waypoints: [
-        L.latLng(54.226, -5.659),
-        L.latLng(55.24, -6.51)
-    ],
-    routeWhileDragging: true,
-    geocoder: L.Control.Geocoder.nominatim(),
-    router: new L.Routing.Mapbox('pk.eyJ1IjoiYm9iaGFycGVyIiwiYSI6ImQwOTg1YTg2MTQzYzk3Mzc5MWVjYzFkZDQzN2M1NTUzIn0.mA2WO4WAZzh-qwoqN4QVjg'),
-	waypointMode: "snap",
-	showAlternatives: true,
-	show: false,
-	lineOptions: {
-		styles: [{color: 'blue', opacity: 0.15, weight: 9}, 
-				 {color: 'yellow', opacity: 0.8, weight: 6}, 
-				 {color: 'green', opacity: 1, weight: 2}]},
-	altLineOptions: {
-		styles: [{color: 'blue', opacity: 0.15, weight: 9}, 
-				 {color: 'yellow', opacity: 0.15, weight: 6}, 
-				 {color: 'yellow', opacity: 0.5, weight: 2}]}
-  }).addTo(map);
    
 </script>  
 
