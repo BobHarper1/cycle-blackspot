@@ -33,13 +33,11 @@
 
 	<script>
 // Load OpenCycleMap as tile baselayer
-  var OpenCycleMap = L.tileLayer('http://b.tile.thunderforest.com/cycle/{z}/{x}/{y}.png', {
+  var OpenCycleMap = L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 		maxZoom: 18,
-		attribution: 'Data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, ' +
-			'<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-			'Routing <a href="http://project-osrm.org/">OSRM</a>, ' +
-			'Map &copy; <a href="http://www.thunderforest.com/">OpenCycleMap</a>',
+		attribution: 'Data PSNI | &copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
 	});	
+
 // Add collisions data as .GeoJSON layer with popup for each click event (a_type = severity of collision)
 // Add clusters data (default layer), no events
   function onEachFeature(feature, layer) {
