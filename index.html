@@ -70,8 +70,8 @@
 // Add collisions data as .GeoJSON layer with popup for each click event (a_type = severity of collision)
 // Add clusters data (default layer), no events
   function onEachFeature(feature, layer) {
-        if (feature.properties && feature.properties.a_type && feature.properties.a_day && feature.properties.a_month && feature.properties.a_year) {
-        layer.bindPopup("Severity: " + feature.properties.a_type + "<br />Date: " feature.properties.a_day + "-" + feature.properties.a_month + "-" + feature.properties.a_year);
+        if (feature.properties && feature.properties.a_type) {
+        layer.bindPopup("Severity: " + feature.properties.a_type + "<br />Date: " + feature.properties.a_day + "-" + feature.properties.a_month + "-" + feature.properties.a_year);
     	}
   }
   
